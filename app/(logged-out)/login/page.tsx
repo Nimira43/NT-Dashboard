@@ -42,27 +42,57 @@ export default function LoginPage() {
                 </CardHeader>
                 <CardContent>
                     <Form {...form}>
-                        <form onSubmit={form.handleSubmit(handleSubmit)}>
-                            <FormField control={form.control} name='email' render={({field}) => (
-                                <FormItem>
-                                    <FormLabel>
-                                        Email
-                                    </FormLabel>
-                                    <FormControl>
-                                        <Input placeholder='you@company.com ' type='email' {...field}/>
-                                    </FormControl>
-                                    <FormDescription>
-                                        Enter the email address you signed up with NT Dashboard.
-                                    </FormDescription>
-                                    <FormMessage />    
-                                </FormItem>                            
-                            )}/>
+                        <form className='flex flex-col gap-4' onSubmit={form.handleSubmit(handleSubmit)}>
+                            <FormField 
+                                control={form.control} 
+                                name='email' 
+                                render={({field}) => (
+                                    <FormItem>
+                                        <FormLabel>
+                                            Email
+                                        </FormLabel>
+                                        <FormControl>
+                                            <Input                      
+                                                placeholder='you@company.com' 
+                                                type='email' 
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormDescription>
+                                            Enter the email address you signed up for NT Dashboard.
+                                        </FormDescription>
+                                        <FormMessage />    
+                                    </FormItem>                            
+                                )}
+                            />
+                            <FormField 
+                                control={form.control} 
+                                name='password' 
+                                render={({field}) => (
+                                    <FormItem>
+                                        <FormLabel>
+                                            Password
+                                        </FormLabel>
+                                        <FormControl>
+                                            <Input                      
+                                                placeholder='Password' 
+                                                type='password' 
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />    
+                                    </FormItem>                            
+                                )}
+                            />
+                            <Button type='submit'>
+                                Login
+                            </Button> 
                         </form>
                     </Form>
                 </CardContent>
                 <CardFooter className='justify-between'>
-                    <small>Dont have an account?</small>
-                    <Button asChild size='sm'>
+                    <small>Do not have an account?</small>
+                    <Button asChild variant='outline' size='sm'>
                         <Link href='/signup'>
                             Sign Up
                         </Link>
