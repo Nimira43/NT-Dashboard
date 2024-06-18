@@ -12,15 +12,15 @@ import * as z from 'zod'
 
 const formSchema = z.object({
     email: z.string().email(),
-    password: z.string(), 
+    // password: z.string(), 
 })
 
-export default function LoginPage() {
+export default function SignupPage() {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: '',
-            password: ''
+            // password: ''
         }
     })
 
@@ -34,10 +34,10 @@ export default function LoginPage() {
             <Card className='w-full max-w-sm'>
                 <CardHeader>
                     <CardTitle>
-                        Login
+                        Sign Up
                     </CardTitle>
                     <CardDescription>
-                        Login to your NT Dashboard account.
+                        Sign Up for a NT Dashboard account.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -58,43 +58,21 @@ export default function LoginPage() {
                                                 {...field}
                                             />
                                         </FormControl>
-                                        <FormDescription>
-                                            Enter the email address you signed up for NT Dashboard.
-                                        </FormDescription>
                                         <FormMessage />    
-                                    </FormItem>                            
-                                )}
-                            />
-                            <FormField 
-                                control={form.control} 
-                                name='password' 
-                                render={({field}) => (
-                                    <FormItem>
-                                        <FormLabel>
-                                            Password
-                                        </FormLabel>
-                                        <FormControl>
-                                            <Input                      
-                                                placeholder='Password' 
-                                                type='password' 
-                                                {...field}
-                                            />
-                                        </FormControl>
-                                        <FormMessage />    
-                                    </FormItem>                            
+                                    </FormItem>                     
                                 )}
                             />
                             <Button type='submit'>
-                                Login
+                                Sign Up
                             </Button> 
                         </form>
                     </Form>
                 </CardContent>
                 <CardFooter className='justify-between'>
-                    <small>Do not have an account?</small>
+                    <small>Already have an account?</small>
                     <Button asChild variant='outline' size='sm'>
-                        <Link href='/sign-up'>
-                            Sign Up
+                        <Link href='/login'>
+                            Login
                         </Link>
                     </Button>
                 </CardFooter>
