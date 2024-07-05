@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Satellite } from 'lucide-react'
 import Link from 'next/link'
@@ -81,8 +81,16 @@ export default function SignupPage() {
                                                 <SelectValue placeholder='Select an account type' />
                                             </SelectTrigger>                            
                                         </FormControl>
-                                        <SelectContent></SelectContent>
+                                        <SelectContent>
+                                            <SelectItem value='personal'>
+                                                Personal
+                                            </SelectItem>
+                                            <SelectItem value='company'>
+                                                Company
+                                            </SelectItem>
+                                        </SelectContent>
                                     </Select>
+                                    <FormMessage />
                                 </FormItem>                                
                             )}
                         />
