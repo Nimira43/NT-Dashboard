@@ -32,83 +32,127 @@ export default function SignupPage() {
     console.log('Login successful')
   }
 
+  const accountType = form.watch('accountType')
+
   return (
     <>
-        <Satellite size={50} className='text-[#ea580c]' />
-        <Card className='w-full max-w-sm'>
-            <CardHeader>
-                <CardTitle>
-                    Sign Up
-                </CardTitle>
-                <CardDescription>
-                    Sign Up for a NT Dashboard account.
-                </CardDescription>
-            </CardHeader>
-            <CardContent>
-                <Form {...form}>
-                    <form
-                        className='flex flex-col gap-4'
-                        onSubmit={form.handleSubmit(handleSubmit)}>
-                        <FormField 
-                            control={form.control} 
-                            name='email' 
-                            render={({field}) => (
-                                <FormItem>
-                                    <FormLabel>
-                                        Email
-                                    </FormLabel>
-                                    <FormControl>
-                                        <Input       
-                                            placeholder='you@company.com' 
-                                            {...field}
-                                        />
-                                    </FormControl>
-                                    <FormMessage />    
-                                </FormItem>                     
-                            )}
-                        />
-                        <FormField
-                            control={form.control}
-                            name='accountType'
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>
-                                        Account Type
-                                    </FormLabel>
-                                    <Select onValueChange={field.onChange}>
-                                        <FormControl>
-                                            <SelectTrigger>
-                                                <SelectValue placeholder='Select an account type' />
-                                            </SelectTrigger>                            
-                                        </FormControl>
-                                        <SelectContent>
-                                            <SelectItem value='personal'>
-                                                Personal
-                                            </SelectItem>
-                                            <SelectItem value='company'>
-                                                Company
-                                            </SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                    <FormMessage />
-                                </FormItem>                                
-                            )}
-                        />
-                        <Button type='submit'>
-                            Sign Up
-                        </Button> 
-                    </form>
-                </Form>
-            </CardContent>
-            <CardFooter className='justify-between'>
-                <small>Already have an account?</small>
-                <Button asChild variant='outline' size='sm'>
-                    <Link href='/login'>
-                        Login
-                    </Link>
-                </Button>
-            </CardFooter>
-        </Card> 
+      <Satellite size={50} className='text-[#ea580c]' />
+      <Card className='w-full max-w-sm'>
+        <CardHeader>
+          <CardTitle>
+            Sign Up
+          </CardTitle>
+          <CardDescription>
+            Sign Up for a NT Dashboard account.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Form {...form}>
+            <form
+              className='flex flex-col gap-4'
+              onSubmit={form.handleSubmit(handleSubmit)}>
+              <FormField 
+                control={form.control} 
+                name='email' 
+                render={({field}) => (
+                  <FormItem>
+                    <FormLabel>
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input       
+                        placeholder='you@company.com' 
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />    
+                  </FormItem>                     
+                )}
+              />
+              <FormField
+                  control={form.control}
+                  name='accountType'
+                  render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                        Account Type
+                    </FormLabel>
+                    <Select onValueChange={field.onChange}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder='Select an account type' />
+                        </SelectTrigger>                            
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value='personal'>
+                            Personal
+                        </SelectItem>
+                        <SelectItem value='company'>
+                            Company
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>                                
+                )}
+              />
+              {accountType === 'company' &&
+                <>
+                  <FormField 
+                    control={form.control} 
+                    name='companyName' 
+                    render={({field}) => (
+                      <FormItem>
+                        <FormLabel>
+                          Company Name
+                        </FormLabel>
+                        <FormControl>
+                          <Input       
+                            placeholder='Company Name' 
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />    
+                      </FormItem>                     
+                    )}
+                  />
+                  <FormField 
+                    control={form.control} 
+                    name='numberOfEmployees' 
+                    render={({field}) => (
+                      <FormItem>
+                        <FormLabel>
+                          Employees
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            type='number'
+                            min={0}      
+                            placeholder='Employees' 
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />    
+                      </FormItem>                     
+                    )}
+                  />
+                </>
+              }
+              <Button type='submit'>
+                  Sign Up
+              </Button> 
+            </form>
+          </Form>
+        </CardContent>
+        <CardFooter className='justify-between'>
+          <small>Already have an account?</small>
+          <Button asChild variant='outline' size='sm'>
+            <Link href='/login'>
+              Login
+            </Link>
+          </Button>
+        </CardFooter>
+      </Card> 
     </>
   )
 }
