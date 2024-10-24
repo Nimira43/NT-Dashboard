@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip"
-import { MoonIcon, SunIcon } from "lucide-react"
+import { useState } from 'react'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tooltip'
+import { MoonIcon, SunIcon } from 'lucide-react'
 
 type Props = {
     className?: string
@@ -22,7 +22,7 @@ export function LightDarkToggle({ className }: Props) {
                     {isDarkMode ? <MoonIcon /> : <SunIcon />}
                 </TooltipTrigger>
                 <TooltipContent>
-                    {isDarkMode ? "Enable Light Mode" : "Enable Dark Mode"}
+                    {isDarkMode ? 'Enable Light Mode' : 'Enable Dark Mode'}
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
