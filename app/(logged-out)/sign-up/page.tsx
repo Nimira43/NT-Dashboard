@@ -15,9 +15,22 @@ const formSchema = z.object({
     email: z.string().email(),
     accountType: z.enum(['personal', 'company']),
     companyName: z.string().optional(),
-    numberOfEmployees: z.coerce.number().optional()
-
-  // password: z.string(), 
+    numberOfEmployees: z.coerce.number().optional() 
+}).superRefine((data, ctx) => {
+  if (data.accountType === 'company' && !data.companyName) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['companyName'],
+      message: 'Company name is required'
+    })
+  }
+  if (data.accountType === 'company' && (!data.numberOfEmployees || data.numberOfEmployees < 1)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['numberOfEmployees'],
+      message: 'Number of employees is required'
+    })
+  }
 })
 
 export default function SignupPage() {
