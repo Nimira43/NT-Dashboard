@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Popover, PopoverTrigger } from '@/components/ui/popover'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Satellite } from 'lucide-react'
@@ -170,12 +171,13 @@ export default function SignupPage() {
                       Date of Birth
                     </FormLabel>
                     <FormControl>
-                      <Input 
-                        type='number'
-                        min={0}      
-                        placeholder='Employees' 
-                        {...field}
-                      />
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <FormControl>
+                            
+                          </FormControl>
+                        </PopoverTrigger>
+                      </Popover>
                     </FormControl>
                     <FormMessage />    
                   </FormItem>                     
