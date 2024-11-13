@@ -171,7 +171,12 @@ export default function SignupPage() {
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
-                            <Button>Date of Birth</Button>
+                            <Button
+                              variant='outline'
+                              className='normal-case'
+                            >
+                              Select Date
+                            </Button>
                           </FormControl>
                         </PopoverTrigger>
                       </Popover>
