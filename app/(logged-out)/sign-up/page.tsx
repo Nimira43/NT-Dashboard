@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Popover, PopoverTrigger } from '@/components/ui/popover'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Satellite } from 'lucide-react'
+import { CalendarIcon, Satellite } from 'lucide-react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
@@ -166,16 +166,17 @@ export default function SignupPage() {
                 control={form.control} 
                 name='dob' 
                 render={({field}) => (
-                  <FormItem className='flex flex-col'>
+                  <FormItem className='flex flex-col pt-2'>
                     <FormLabel>Date of Birth</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
                             <Button
                               variant='outline'
-                              className='normal-case'
+                              className='normal-case flex justify-between pr-3'
                             >
-                              Select Date
+                              <span>Select Date</span>
+                              <CalendarIcon />
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
