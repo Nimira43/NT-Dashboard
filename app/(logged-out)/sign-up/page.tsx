@@ -166,19 +166,15 @@ export default function SignupPage() {
                 control={form.control} 
                 name='dob' 
                 render={({field}) => (
-                  <FormItem>
-                    <FormLabel>
-                      Date of Birth
-                    </FormLabel>
-                    <FormControl>
+                  <FormItem className='flex flex-col'>
+                    <FormLabel>Date of Birth</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
-                            
+                            <Button>Date of Birth</Button>
                           </FormControl>
                         </PopoverTrigger>
                       </Popover>
-                    </FormControl>
                     <FormMessage />    
                   </FormItem>                     
                 )}
