@@ -15,7 +15,17 @@ const formSchema = z.object({
     email: z.string().email(),
     accountType: z.enum(['personal', 'company']),
     companyName: z.string().optional(),
-    numberOfEmployees: z.coerce.number().optional() 
+    numberOfEmployees: z.coerce.number().optional(), 
+    dob: z.date().refine(() => {
+      const today = new Date()
+      const eighteenYearsAgo = new Date(
+        today.getFullYear() - 18,
+        today.getMonth(),
+        today.getDate()
+      )
+      return date <= eighteenYearsAgo
+    }, 'You must be at least 18 years old to sign up')
+
 }).superRefine((data, ctx) => {
   if (data.accountType === 'company' && !data.companyName) {
     ctx.addIssue({
