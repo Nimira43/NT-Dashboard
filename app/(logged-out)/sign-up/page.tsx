@@ -23,7 +23,7 @@ const formSchema = z.object({
         today.getMonth(),
         today.getDate()
       )
-      return date <= eighteenYearsAgo
+      return date <= eighteenYearsAgo 
     }, 'You must be at least 18 years old to sign up')
 
 }).superRefine((data, ctx) => {
@@ -119,7 +119,7 @@ export default function SignupPage() {
                   </FormItem>                                
                 )}
               />
-              {accountType === 'company' &&
+              {accountType === 'company' && (
                 <>
                   <FormField 
                     control={form.control} 
@@ -160,7 +160,27 @@ export default function SignupPage() {
                     )}
                   />
                 </>
-              }
+              )}
+              <FormField 
+                control={form.control} 
+                name='dob' 
+                render={({field}) => (
+                  <FormItem>
+                    <FormLabel>
+                      Date of Birth
+                    </FormLabel>
+                    <FormControl>
+                      <Input 
+                        type='number'
+                        min={0}      
+                        placeholder='Employees' 
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />    
+                  </FormItem>                     
+                )}
+              />
               <Button type='submit'>
                   Sign Up
               </Button> 
