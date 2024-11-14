@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { DayPicker, useDayPicker } from 'react-day-picker'
+import { DayPicker, useDayPicker, useNavigation } from 'react-day-picker'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { format } from 'date-fns'
@@ -53,12 +53,14 @@ function Calendar({
         day_range_middle:
           'aria-selected:bg-accent aria-selected:text-accent-foreground',
         day_hidden: 'invisible',
+        caption_dropdowns: 'flex gap-1',
         ...classNames,
       }}
       components={{
         IconLeft: ({ ...props }) => <ChevronLeft className='h-4 w-4' />,
         IconRight: ({ ...props }) => <ChevronRight className='h-4 w-4' />,
         Dropdown: (dropdownProps) => {
+          const { currentMonth } = useNavigation()
           const { fromYear, fromMonth, fromDate, toYear, toMonth, toDate} = useDayPicker()
           let selectValues: {value: string; label: string}[] = []
           
@@ -89,10 +91,12 @@ function Calendar({
             }          
           }
 
+          const caption = format(currentMonth, dropdownProps.name === 'months' ? 'MMM' : 'yyyy')
+
           return (
             <Select>
               <SelectTrigger>
-                Dropdown
+                {caption}
               </SelectTrigger>
               <SelectContent>
                 {selectValues.map(selectValue => (
