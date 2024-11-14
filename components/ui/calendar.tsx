@@ -6,6 +6,9 @@ import { DayPicker } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { format } from "date-fns"
+import { Select, SelectContent, SelectTrigger } from "./select"
+import { SelectItem } from "@radix-ui/react-select"
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>
 
@@ -57,7 +60,29 @@ function Calendar({
         IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
         Dropdown: (dropdownProps) => {
-          return <div />
+          let selectValues: {value: string; label: string}[] = []
+          if (dropdownProps.name === 'months') {
+            selectValues = Array.from({length: 12}, (_, i) => {
+              return {
+                value: i.toString(),
+                label: format(new Date(new Date().getFullYear(), i, 1), 'MMM')
+              }
+            })
+          }
+          return (
+            <Select>
+              <SelectTrigger>
+                Dropdown
+              </SelectTrigger>
+              <SelectContent>
+                {selectValues.map(selectValue => (
+                  <SelectItem key={selectValue.value} value={selectValue.value}>
+                    {selectValue.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          )
         }
       }}
       {...props}
