@@ -58,6 +58,8 @@ export default function SignupPage() {
   }
 
   const accountType = form.watch('accountType')
+  const dobFromDate = new Date()
+  dobFromDate.setFullYear(dobFromDate.getFullYear() - 120)
 
   return (
     <>
@@ -189,7 +191,8 @@ export default function SignupPage() {
                             onSelect={field.onChange}
                             fixedWeeks
                             weekStartsOn={1} 
-                            fromYear={1} 
+                            fromDate={dobFromDate} 
+                            toDate={new Date()}
                           />
                         </PopoverContent>
                       </Popover>
