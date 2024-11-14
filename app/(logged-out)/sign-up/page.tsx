@@ -174,7 +174,6 @@ export default function SignupPage() {
                   />
                 </>
               )}
-              
               <FormField 
                 control={form.control} 
                 name='dob' 
@@ -193,7 +192,7 @@ export default function SignupPage() {
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
-                        <PopoverContent align='start' className='w-auto p-0'>
+                        <PopoverContent align='start' className='w-auto p-7'>
                           <Calendar 
                             mode='single' 
                             defaultMonth={field.value}
