@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { format } from 'date-fns'
 import { CalendarIcon, Satellite } from 'lucide-react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
@@ -27,7 +28,6 @@ const formSchema = z.object({
       )
       return date <= eighteenYearsAgo 
     }, 'You must be at least 18 years old to sign up')
-
 }).superRefine((data, ctx) => {
   if (data.accountType === 'company' && !data.companyName) {
     ctx.addIssue({
@@ -45,6 +45,16 @@ const formSchema = z.object({
   }
 })
 
+function getOrdinalSuffix(day: number): string { 
+  if (day > 3 && day < 21) return 'th'
+  switch (day % 10) { 
+    case 1: return 'st' 
+    case 2: return 'nd' 
+    case 3: return 'rd'
+    default: return 'th' 
+  } 
+}
+
 export default function SignupPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -60,7 +70,6 @@ export default function SignupPage() {
   const accountType = form.watch('accountType')
   const dobFromDate = new Date()
   dobFromDate.setFullYear(dobFromDate.getFullYear() - 120)
-
   return (
     <>
       <Satellite size={50} className='text-[#ea580c]' />
@@ -165,6 +174,7 @@ export default function SignupPage() {
                   />
                 </>
               )}
+              
               <FormField 
                 control={form.control} 
                 name='dob' 
@@ -178,7 +188,7 @@ export default function SignupPage() {
                               variant='outline'
                               className='normal-case flex justify-between pr-3'
                             >
-                              <span>Select Date</span>
+                              {!!field.value ? `${new Date(field.value).getDate()}${getOrdinalSuffix(new Date(field.value).getDate())} ${format(new Date(field.value), 'MMMM yyyy')}` : <span>Select Date</span>}
                               <CalendarIcon />
                             </Button>
                           </FormControl>
@@ -193,6 +203,7 @@ export default function SignupPage() {
                             weekStartsOn={1} 
                             fromDate={dobFromDate} 
                             toDate={new Date()}
+                            captionLayout='dropdown-buttons'
                           />
                         </PopoverContent>
                       </Popover>
