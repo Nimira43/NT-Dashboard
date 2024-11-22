@@ -33,7 +33,7 @@ const formSchema = z.object({
     .min(8, 'Password must contain at least 8 characters')
     .refine((password) => {
       return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
-    }, 'Password must include 1 special character and 1 uppercase character')
+    }, 'Password must include 1 special character and 1 uppercase letter')
   })
   .superRefine((data, ctx) => {
     if (data.accountType === 'company' && !data.companyName) {
