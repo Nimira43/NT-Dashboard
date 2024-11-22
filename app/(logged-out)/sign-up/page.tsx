@@ -20,7 +20,7 @@ const formSchema = z
     accountType: z.enum(['personal', 'company']),
     companyName: z.string().optional(),
     numberOfEmployees: z.coerce.number().optional(), 
-    dob: z.date().refine(() => {
+    dob: z.date().refine((date) => {
       const today = new Date()
       const eighteenYearsAgo = new Date(
         today.getFullYear() - 18,
@@ -29,7 +29,12 @@ const formSchema = z
       )
       return date <= eighteenYearsAgo 
     }, 'You must be at least 18 years old to sign up'),
-    password: z.string().min(8, 'Password must contain at least 8 characters'),
+    password: z
+      .string()
+      .min(8, 'Password must contain at least 8 characters')
+      .refine(() => {
+
+      }),
   })
   .superRefine((data, ctx) => {
     if (data.accountType === 'company' && !data.companyName) {
