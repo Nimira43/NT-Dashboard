@@ -14,7 +14,8 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-const formSchema = z.object({
+const formSchema = z
+  .object({
     email: z.string().email(),
     accountType: z.enum(['personal', 'company']),
     companyName: z.string().optional(),
@@ -27,16 +28,18 @@ const formSchema = z.object({
         today.getDate()
       )
       return date <= eighteenYearsAgo 
-    }, 'You must be at least 18 years old to sign up')
-}).superRefine((data, ctx) => {
-  if (data.accountType === 'company' && !data.companyName) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      path: ['companyName'],
-      message: 'Company name is required'
-    })
-  }
-  if (data.accountType === 'company' && (!data.numberOfEmployees || data.numberOfEmployees < 1)) {
+    }, 'You must be at least 18 years old to sign up'),
+    password: z.string().min(8, 'Password must contain at least 8 characters'),
+  })
+  .superRefine((data, ctx) => {
+    if (data.accountType === 'company' && !data.companyName) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['companyName'],
+        message: 'Company name is required'
+      })
+    }
+    if (data.accountType === 'company' && (!data.numberOfEmployees || data.numberOfEmployees < 1)) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['numberOfEmployees'],
@@ -206,6 +209,24 @@ export default function SignupPage() {
                           />
                         </PopoverContent>
                       </Popover>
+                    <FormMessage />    
+                  </FormItem>                     
+                )}
+              />
+              <FormField 
+                control={form.control} 
+                name='email' 
+                render={({field}) => (
+                  <FormItem>
+                    <FormLabel>
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input       
+                        placeholder='you@company.com' 
+                        {...field}
+                      />
+                    </FormControl>
                     <FormMessage />    
                   </FormItem>                     
                 )}
