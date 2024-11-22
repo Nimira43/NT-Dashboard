@@ -215,15 +215,15 @@ export default function SignupPage() {
               />
               <FormField 
                 control={form.control} 
-                name='email' 
+                name='password' 
                 render={({field}) => (
                   <FormItem>
                     <FormLabel>
-                      Email
+                      Password
                     </FormLabel>
                     <FormControl>
                       <Input       
-                        placeholder='you@company.com' 
+                        placeholder='********' type='password' 
                         {...field}
                       />
                     </FormControl>
