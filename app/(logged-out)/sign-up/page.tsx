@@ -14,27 +14,26 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-const formSchema = z
-  .object({
-    email: z.string().email(),
-    accountType: z.enum(['personal', 'company']),
-    companyName: z.string().optional(),
-    numberOfEmployees: z.coerce.number().optional(), 
-    dob: z.date().refine((date) => {
-      const today = new Date()
-      const eighteenYearsAgo = new Date(
-        today.getFullYear() - 18,
-        today.getMonth(),
-        today.getDate()
-      )
-      return date <= eighteenYearsAgo 
-    }, 'You must be at least 18 years old to sign up'),
-    password: z
-      .string()
-      .min(8, 'Password must contain at least 8 characters')
-      .refine(() => {
-
-      }),
+const formSchema = z.object({
+  email: z.string().email(),
+  accountType: z.enum(['personal', 'company']),
+  companyName: z.string().optional(),
+  numberOfEmployees: z.coerce.number().optional(), 
+  dob: z.date().refine((date) => {
+    const today = new Date()
+    const eighteenYearsAgo = new Date(
+      today.getFullYear() - 18,
+      today.getMonth(),
+      today.getDate()
+    )
+    return date <= eighteenYearsAgo 
+  }, 'You must be at least 18 years old to sign up'),
+  password: z
+    .string()
+    .min(8, 'Password must contain at least 8 characters')
+    .refine((password) => {
+      return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
+    }, 'Password must include 1 special character and 1 uppercase character')
   })
   .superRefine((data, ctx) => {
     if (data.accountType === 'company' && !data.companyName) {
