@@ -18,6 +18,31 @@ const accountTypeSchema = z.object({
   accountType: z.enum(['personal', 'company']),
   companyName: z.string().optional(),
   numberOfEmployees: z.coerce.number().optional(), 
+}).superRefine((data, ctx) => {
+  if (data.accountType === 'company' && !data.companyName) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['companyName'],
+      message: 'Company name is required'
+    })
+  }
+  if (data.accountType === 'company' && (!data.numberOfEmployees || data.numberOfEmployees < 1)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['numberOfEmployees'],
+      message: 'Number of employees is required'
+    })
+  }
+})
+
+const passwordSchema = z.object ({
+  password: z
+    .string()
+    .min(8, 'Password must contain at least 8 characters')
+    .refine((password) => {
+      return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
+    }, 'Password must include 1 special character and 1 uppercase letter'),
+  passwordConfirm: z.string()
 })
 
 const baseSchema = z.object({
@@ -31,13 +56,7 @@ const baseSchema = z.object({
     )
     return date <= eighteenYearsAgo 
   }, 'You must be at least 18 years old to sign up'),
-  password: z
-    .string()
-    .min(8, 'Password must contain at least 8 characters')
-    .refine((password) => {
-      return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
-    }, 'Password must include 1 special character and 1 uppercase letter'),
-  passwordConfirm: z.string()
+  
   })
   .superRefine((data, ctx) => {
     if (data.password !== data.passwordConfirm) {
@@ -47,20 +66,7 @@ const baseSchema = z.object({
         message: 'Passwords do not match'
       })
     }
-    if (data.accountType === 'company' && !data.companyName) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['companyName'],
-        message: 'Company name is required'
-      })
-    }
-    if (data.accountType === 'company' && (!data.numberOfEmployees || data.numberOfEmployees < 1)) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      path: ['numberOfEmployees'],
-      message: 'Number of employees is required'
-    })
-  }
+    
 })
 
 function getOrdinalSuffix(day: number): string { 
