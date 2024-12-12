@@ -33,9 +33,18 @@ const formSchema = z.object({
     .min(8, 'Password must contain at least 8 characters')
     .refine((password) => {
       return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
-    }, 'Password must include 1 special character and 1 uppercase letter')
+    }, 'Password must include 1 special character and 1 uppercase letter'),
+  passwordConfirm: z.string()
+
   })
   .superRefine((data, ctx) => {
+    if (data.password !== data.passwordConfirm) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['passwordConfirm'],
+        message: 'Passwords do not match'
+      })
+    }
     if (data.accountType === 'company' && !data.companyName) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
