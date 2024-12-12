@@ -63,11 +63,9 @@ const baseSchema = z.object({
       today.getDate()
     )
     return date <= eighteenYearsAgo 
-  }, 'You must be at least 18 years old to sign up'),
+  }, 'You must be at least 18 years old to sign up'), 
+})
   
-  })
-  
-
 function getOrdinalSuffix(day: number): string { 
   if (day > 3 && day < 21) return 'th'
   switch (day % 10) { 
