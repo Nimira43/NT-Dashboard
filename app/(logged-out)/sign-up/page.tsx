@@ -43,6 +43,14 @@ const passwordSchema = z.object ({
       return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
     }, 'Password must include 1 special character and 1 uppercase letter'),
   passwordConfirm: z.string()
+}).superRefine((data, ctx) => {
+  if (data.password !== data.passwordConfirm) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['passwordConfirm'],
+      message: 'Passwords do not match'
+    })
+  }   
 })
 
 const baseSchema = z.object({
@@ -58,16 +66,7 @@ const baseSchema = z.object({
   }, 'You must be at least 18 years old to sign up'),
   
   })
-  .superRefine((data, ctx) => {
-    if (data.password !== data.passwordConfirm) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['passwordConfirm'],
-        message: 'Passwords do not match'
-      })
-    }
-    
-})
+  
 
 function getOrdinalSuffix(day: number): string { 
   if (day > 3 && day < 21) return 'th'
