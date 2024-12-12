@@ -66,6 +66,8 @@ const baseSchema = z.object({
   }, 'You must be at least 18 years old to sign up'), 
 })
   
+const formSchema = baseSchema.and(passwordSchema).and(accountTypeSchema)
+
 function getOrdinalSuffix(day: number): string { 
   if (day > 3 && day < 21) return 'th'
   switch (day % 10) { 
