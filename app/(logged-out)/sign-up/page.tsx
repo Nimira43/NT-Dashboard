@@ -14,11 +14,14 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-const formSchema = z.object({
-  email: z.string().email(),
+const accountTypeSchema = z.object({
   accountType: z.enum(['personal', 'company']),
   companyName: z.string().optional(),
   numberOfEmployees: z.coerce.number().optional(), 
+})
+
+const baseSchema = z.object({
+  email: z.string().email(),
   dob: z.date().refine((date) => {
     const today = new Date()
     const eighteenYearsAgo = new Date(
@@ -35,7 +38,6 @@ const formSchema = z.object({
       return /^(?=.*[!@#$%^&*])(?=.*[A-Z]).*$/.test(password)
     }, 'Password must include 1 special character and 1 uppercase letter'),
   passwordConfirm: z.string()
-
   })
   .superRefine((data, ctx) => {
     if (data.password !== data.passwordConfirm) {
