@@ -244,6 +244,24 @@ export default function SignupPage() {
                   </FormItem>                     
                 )}
               />
+              <FormField 
+                control={form.control} 
+                name='passwordConfirm' 
+                render={({field}) => (
+                  <FormItem>
+                    <FormLabel>
+                      Confirm Password
+                    </FormLabel>
+                    <FormControl>
+                      <Input       
+                        placeholder='********' type='password' 
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />    
+                  </FormItem>                     
+                )}
+              />
               <Button type='submit'>
                   Sign Up
               </Button> 
