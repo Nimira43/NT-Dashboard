@@ -244,7 +244,7 @@ export default function SignupPage() {
                     </FormLabel>
                     <FormControl>
                       <PasswordInput      
-                        placeholder='********' type='password' 
+                        placeholder='********' 
                         {...field}
                       />
                     </FormControl>
@@ -261,8 +261,8 @@ export default function SignupPage() {
                       Confirm Password
                     </FormLabel>
                     <FormControl>
-                      <Input       
-                        placeholder='********' type='password' 
+                      <PasswordInput       
+                        placeholder='********' 
                         {...field}
                       />
                     </FormControl>
