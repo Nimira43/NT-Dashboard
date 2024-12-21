@@ -4,19 +4,28 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 import { Input } from './input'
-import { EyeIcon } from 'lucide-react'
+import { EyeIcon, EyeOffIcon } from 'lucide-react'
 
 export interface PasswordInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputProps>(
   ({ className, type, ...props }, ref) => {
-    const {showPassword, setShowPassword} = React.useState(false)
+    const [showPassword, setShowPassword] = React.useState(false)
     return (
       <div className='relative'>
-        <Input {...props} ref={ref} className={cn('pr-10', className)}/>
+        <Input
+          type={showPassword ? 'text' : 'password' } 
+          {...props} 
+          ref={ref} 
+          className={cn('pr-10', className)}
+        />
         <span className='absolute top-[7px] right-2 cursor-pointer select-none'>
-          <EyeIcon />
+          {showPassword ? (
+            <EyeIcon onClick={() => setShowPassword(false)} /> 
+          ) : (
+            <EyeOffIcon onClick={() => setShowPassword(true)} />
+          )}
         </span>
       </div>
     )
