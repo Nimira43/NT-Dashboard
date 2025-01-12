@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { PasswordInput } from '@/components/ui/password-input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Checkbox } from '@/components/ui/checkbox'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { format } from 'date-fns'
 import { CalendarIcon, Satellite } from 'lucide-react'
@@ -19,7 +20,7 @@ const accountTypeSchema = z.object({
   accountType: z.enum(['personal', 'company']),
   companyName: z.string().optional(),
   numberOfEmployees: z.coerce.number().optional(), 
-  acceptTerms: z.boolean(),
+  // acceptTerms: z.boolean(),
 }).superRefine((data, ctx) => {
   if (data.accountType === 'company' && !data.companyName) {
     ctx.addIssue({
@@ -57,6 +58,9 @@ const passwordSchema = z.object ({
 
 const baseSchema = z.object({
   email: z.string().email(),
+  acceptTerms: z.boolean({
+    required_error: 'You must accept the terms and conditions.'
+  }),
   dob: z.date().refine((date) => {
     const today = new Date()
     const eighteenYearsAgo = new Date(
@@ -267,6 +271,26 @@ export default function SignupPage() {
                         {...field}
                       />
                     </FormControl>
+                    <FormMessage />    
+                  </FormItem>                     
+                )}
+              />
+              <FormField 
+                control={form.control} 
+                name='acceptTerms' 
+                render={({field}) => (
+                  <FormItem>
+                    <div className='flex gap-2 items-center'>
+                      <FormControl>
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      </FormControl>
+                      <FormLabel>
+                       I accept terms and conditions
+                      </FormLabel>
+                    </div>
+                    <FormDescription>
+                      By signing up you agree to out <Link href='terms' className='text-primary hover:underline'>terms and conditions</Link>
+                    </FormDescription>
                     <FormMessage />    
                   </FormItem>                     
                 )}
