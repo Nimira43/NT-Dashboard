@@ -19,6 +19,7 @@ const accountTypeSchema = z.object({
   accountType: z.enum(['personal', 'company']),
   companyName: z.string().optional(),
   numberOfEmployees: z.coerce.number().optional(), 
+  acceptTerms: z.boolean(),
 }).superRefine((data, ctx) => {
   if (data.accountType === 'company' && !data.companyName) {
     ctx.addIssue({

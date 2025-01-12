@@ -74,7 +74,7 @@ export default function LoginPage() {
                       Password
                     </FormLabel>
                     <FormControl>
-                      <PasswordInput                      
+                      <PasswordInput                   
                         placeholder='********'  
                         {...field}
                       />
