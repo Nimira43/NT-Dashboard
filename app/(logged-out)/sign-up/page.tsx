@@ -11,10 +11,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { format } from 'date-fns'
-import { CalendarIcon, Satellite } from 'lucide-react'
+import { CalendarIcon, Router, Satellite } from 'lucide-react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
+import { useRouter } from 'next/navigation'
 
 const accountTypeSchema = z.object({
   accountType: z.enum(['personal', 'company']),
@@ -85,15 +86,19 @@ function getOrdinalSuffix(day: number): string {
 }
 
 export default function SignupPage() {
+  const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
         email: '',
-        // password: ''
+        password: '',
+        passwordConfirm: '',
+        companyName: '',
     }
   })
-  const handleSubmit = () => {
-    console.log('Login successful')
+  const handleSubmit = (data: z.infer<typeof formSchema>) => {
+    console.log('Login successful', data)
+    router.push('./dashboard')
   }
 
   const accountType = form.watch('accountType')
@@ -195,6 +200,7 @@ export default function SignupPage() {
                             min={0}      
                             placeholder='Employees' 
                             {...field}
+                            value={field.value ?? ''}
                           />
                         </FormControl>
                         <FormMessage />    
