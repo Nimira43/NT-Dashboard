@@ -61,7 +61,7 @@ const baseSchema = z.object({
   email: z.string().email(),
   acceptTerms: z.boolean({
     required_error: 'You must accept the terms and conditions.'
-  }),
+  }).refine((checked) => checked, 'You must accept the terms and conditions.'),
   dob: z.date().refine((date) => {
     const today = new Date()
     const eighteenYearsAgo = new Date(
