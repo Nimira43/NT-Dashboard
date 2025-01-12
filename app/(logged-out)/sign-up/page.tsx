@@ -109,7 +109,7 @@ export default function SignupPage() {
       <Satellite size={50} className='text-[#ea580c]' />
       <Card className='w-full max-w-sm'>
         <CardHeader>
-          <CardTitle>
+          <CardTitle className='uppercase'>
             Sign Up
           </CardTitle>
           <CardDescription>
@@ -301,7 +301,7 @@ export default function SignupPage() {
                   </FormItem>                     
                 )}
               />
-              <Button type='submit'>
+              <Button type='submit' className='uppercase'>
                   Sign Up
               </Button> 
             </form>
@@ -310,7 +310,7 @@ export default function SignupPage() {
         <CardFooter className='justify-between'>
           <small>Already have an account?</small>
           <Button asChild variant='outline' size='sm'>
-            <Link href='/login'>
+            <Link href='/login' className='uppercase'>
               Login
             </Link>
           </Button>

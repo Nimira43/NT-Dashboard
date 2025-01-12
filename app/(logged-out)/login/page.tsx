@@ -37,7 +37,7 @@ export default function LoginPage() {
       <Satellite size={50} className='text-[#ea580c]' />
       <Card className='w-full max-w-sm'>
         <CardHeader>
-          <CardTitle>
+          <CardTitle className='uppercase'>
             Login
           </CardTitle>
           <CardDescription>
@@ -85,7 +85,7 @@ export default function LoginPage() {
                     <FormMessage />    
                   </FormItem>                            
                 )}/>
-                <Button type='submit'>
+                <Button type='submit' className='uppercase'>
                   Login
                 </Button> 
               </form>
@@ -94,7 +94,7 @@ export default function LoginPage() {
           <CardFooter className='justify-between'>
             <small>Do not have an account?</small>
             <Button asChild variant='outline' size='sm'>
-              <Link href='/sign-up'>
+              <Link href='/sign-up' className='uppercase'>
                 Sign Up
               </Link>
             </Button>
