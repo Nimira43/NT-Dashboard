@@ -7,7 +7,7 @@ export default function MenuTitle() {
         size={40} 
         className='text-[#ea580c]'
       /> 
-      <span className='pl-2'>Dashboard</span>
+      <span className='pl-2'>NimiraTech</span>
 
     </h4>
   )
