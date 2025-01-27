@@ -6,7 +6,8 @@ export default function MenuTitle() {
       <Satellite 
         size={40} 
         className='text-[#ea580c]'
-      /> Dashboard
+      /> 
+      <span className='pl-2'>Dashboard</span>
 
     </h4>
   )
