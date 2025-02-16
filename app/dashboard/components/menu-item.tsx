@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -13,7 +14,9 @@ export default function MenuItem({ children, href}: Props) {
   const isActive = pathname === href
 
   return (
-    <Link href={href}>
+    <Link
+      className={cn('block hover:bg-white dark:hover:bg-zinc-700 rounded-sm text-muted-foreground hover:text-foreground')}
+      href={href}>
       {children}
     </Link>
   )
