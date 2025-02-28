@@ -8,7 +8,8 @@ export default function MainMenu() {
       <div className='border-b dark:border-b-[#fff] border-b-[#ea580c] pb-4'>
         <MenuTitle />
       </div>
-      <div className='py-4'>
+      <div className='py-4
+      '>
         <MenuItem href='/dashboard'>
           Dashboard
         </MenuItem>
