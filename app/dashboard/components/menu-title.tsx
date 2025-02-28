@@ -5,7 +5,7 @@ export default function MenuTitle() {
     <h4 className='flex items-center'>
       <Satellite 
         size={40} 
-        className='text-[#ea580c]'
+        className='text-main-dark'
       /> 
       <span className='pl-2'>NimiraTech</span>
 

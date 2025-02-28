@@ -4,8 +4,8 @@ import MenuTitle from './menu-title'
 export default function MainMenu() {
   
   return (
-    <div className='bg-[#000] overflow-auto p-4'>
-      <div className='border-b dark:border-b-[#fff] border-b-[#ea580c] pb-4'>
+    <div className='bg-dark-extra overflow-auto p-4'>
+      <div className='border-b dark:border-b-light border-b-main-dark pb-4'>
         <MenuTitle />
       </div>
       <div className='py-4
