@@ -90,10 +90,10 @@ export default function SignupPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-        email: '',
-        password: '',
-        passwordConfirm: '',
-        companyName: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
+      companyName: '',
     }
   })
   const handleSubmit = (data: z.infer<typeof formSchema>) => {

@@ -34,7 +34,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <Satellite size={50} className='text-[#ea580c]' />
+      <Satellite size={50} className='text-main-dark' />
       <Card className='w-full max-w-sm'>
         <CardHeader>
           <CardTitle className='uppercase'>
