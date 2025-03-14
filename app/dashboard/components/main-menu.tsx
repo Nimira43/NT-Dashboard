@@ -26,6 +26,9 @@ export default function MainMenu() {
           Settings
         </MenuItem>
       </div>
+      <div className='flex gap-2 items-center'>
+
+      </div>
     </div>
   )
 }
