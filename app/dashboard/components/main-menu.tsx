@@ -5,11 +5,11 @@ import MenuTitle from './menu-title'
 export default function MainMenu() {
   
   return (
-    <div className='bg-dark-extra overflow-auto p-4'>
+    <div className='bg-dark-extra overflow-auto p-4 flex flex-col'>
       <div className='border-b dark:border-b-light border-b-main-dark pb-4'>
         <MenuTitle />
       </div>
-      <div className='py-4
+      <div className='py-4 grow
       '>
         <MenuItem href='/dashboard'>
           Dashboard
