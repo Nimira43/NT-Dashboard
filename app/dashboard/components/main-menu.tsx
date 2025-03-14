@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import MenuItem from './menu-item'
 import MenuTitle from './menu-title'
+import Link from 'next/link'
 
 export default function MainMenu() {
   
@@ -33,6 +34,12 @@ export default function MainMenu() {
             NR
           </AvatarFallback>
         </Avatar>
+        <Link
+          href='/'
+          className='uppercase text-light hover:text-main cursor-pointer transition-colors duration-500'
+        >
+          Logout
+        </Link>
       </div>
     </div>
   )
