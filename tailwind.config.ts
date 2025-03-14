@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         'main': '#ff4500',
-        'main-dark': '#ea580c',
+        'main-dark': '#ab3003',
         'light': '#fffcfa',
         'dark': '#111',
         'dark-extra': '#000',  

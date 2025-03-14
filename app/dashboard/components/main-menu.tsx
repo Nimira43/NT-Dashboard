@@ -2,12 +2,13 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import MenuItem from './menu-item'
 import MenuTitle from './menu-title'
 import Link from 'next/link'
+import { LightDarkToggle } from '@/components/ui/light-dark-toggle'
 
 export default function MainMenu() {
   
   return (
-    <div className='bg-dark-extra overflow-auto p-4 flex flex-col'>
-      <div className='border-b dark:border-b-light border-b-main-dark pb-4'>
+    <div className='bg-grey-dark overflow-auto p-4 flex flex-col'>
+      <div className='border-b border-b-main pb-4'>
         <MenuTitle />
       </div>
       <div className='py-4 grow
@@ -36,10 +37,11 @@ export default function MainMenu() {
         </Avatar>
         <Link
           href='/'
-          className='uppercase text-light hover:text-main cursor-pointer transition-colors duration-500'
+          className='uppercase text-main hover:text-main-dark cursor-pointer transition-colors duration-500'
         >
           Logout
         </Link>
+        <LightDarkToggle />
       </div>
     </div>
   )
