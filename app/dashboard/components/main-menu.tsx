@@ -41,7 +41,7 @@ export default function MainMenu() {
         >
           Logout
         </Link>
-        <LightDarkToggle />
+        <LightDarkToggle className='ml-auto' />
       </div>
     </div>
   )
