@@ -29,7 +29,7 @@ export default function MainMenu() {
       </div>
       <div className='flex gap-2 items-center'>
         <Avatar>
-          <AvatarFallback>
+          <AvatarFallback className='bg-main'>
             NR
           </AvatarFallback>
         </Avatar>
