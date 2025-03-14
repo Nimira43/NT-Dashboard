@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import MenuItem from './menu-item'
 import MenuTitle from './menu-title'
 
@@ -27,7 +28,11 @@ export default function MainMenu() {
         </MenuItem>
       </div>
       <div className='flex gap-2 items-center'>
-        
+        <Avatar>
+          <AvatarFallback>
+            NR
+          </AvatarFallback>
+        </Avatar>
       </div>
     </div>
   )
