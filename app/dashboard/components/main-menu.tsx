@@ -7,7 +7,7 @@ import { LightDarkToggle } from '@/components/ui/light-dark-toggle'
 export default function MainMenu() {
   
   return (
-    <div className='bg-grey-dark overflow-auto p-4 flex flex-col'>
+    <div className='bg-grey-light-extra dark:bg-grey-dark overflow-auto p-4 flex flex-col '>
       <div className='border-b border-b-main pb-4'>
         <MenuTitle />
       </div>
