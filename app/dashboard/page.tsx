@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export default function DashboardPage() {
   return (
@@ -11,6 +11,12 @@ export default function DashboardPage() {
           Teams Stats
         </TabsTrigger>
       </TabsList>
+      <TabsContent value='employees'>
+
+      </TabsContent>
+      <TabsContent value='teams'>
+
+      </TabsContent>
     </Tabs>
   )
 }
