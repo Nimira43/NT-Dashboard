@@ -12,10 +12,10 @@ export default function DashboardPage() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value='employees'>
-
+        Employees
       </TabsContent>
       <TabsContent value='teams'>
-
+        Teams
       </TabsContent>
     </Tabs>
   )
