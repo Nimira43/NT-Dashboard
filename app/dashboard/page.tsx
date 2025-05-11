@@ -5,7 +5,7 @@ import TeamsStats from './components/teams-stats'
 export default function DashboardPage() {
   return (
     <Tabs defaultValue='employees'>
-      <TabsList>
+      <TabsList className='mb-4'>
         <TabsTrigger value='employees'>
           Employees Stats
         </TabsTrigger>
