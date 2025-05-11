@@ -7,7 +7,7 @@ import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 export default function EmployeesStats() {
   const totalEmployees = 173
   const employeesAttending = 128
-  const employeesAttendingPresent = ((employeesAttending / totalEmployees) * 100)
+  const employeesAttendingPresent = parseFloat(((employeesAttending / totalEmployees) * 100).toFixed(2))
   return (
     <div className='grid lg:grid-cols-3 gap-4'>
       <Card>
