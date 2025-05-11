@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
-import { BiUser } from 'react-icons/bi'
+import { BiUser, BiUserCheck } from 'react-icons/bi'
 
 export default function EmployeesStats() {
   return (
@@ -38,6 +38,12 @@ export default function EmployeesStats() {
             Employees Attending
           </CardTitle>
         </CardHeader>
+        <CardContent className='flex justify-between items-center'>
+          <div className='flex gap-2 items-center'>
+            <BiUserCheck className='text-xl' />
+            <div className='text-4xl font-light'>48</div>
+          </div>
+        </CardContent>
       </Card>
       <Card className='border-main'>
       <CardHeader>
