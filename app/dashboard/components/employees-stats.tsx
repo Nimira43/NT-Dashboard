@@ -11,10 +11,18 @@ export default function EmployeesStats() {
         </CardHeader>
       </Card>
       <Card>
-        Card 2
+        <CardHeader>
+          <CardTitle className='font-normal text-base'>
+            Employees Attending
+          </CardTitle>
+        </CardHeader>
       </Card>
       <Card className='border-main'>
-        Card 3
+      <CardHeader>
+          <CardTitle className='font-normal text-base'>
+            Employee Recognition
+          </CardTitle>
+        </CardHeader>
       </Card>
     </div>
   )
