@@ -11,7 +11,7 @@ export default function MainMenu() {
       <header className='border-b border-b-main pb-4'>
         <MenuTitle />
       </header>
-      <div className='py-4 grow
+      <div className='py-4 grow uppercase
       '>
         <MenuItem href='/dashboard'>
           Dashboard
