@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 
@@ -44,6 +44,9 @@ export default function EmployeesStats() {
             <div className='text-4xl font-light'>48</div>
           </div>
         </CardContent>
+        <CardFooter>
+
+        </CardFooter>
       </Card>
       <Card className='border-main'>
       <CardHeader>
