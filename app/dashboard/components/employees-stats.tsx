@@ -46,7 +46,10 @@ export default function EmployeesStats() {
           </div>
         </CardContent>
         <CardFooter>
-          <span></span>
+          <span className='text-xs text-green-500 flex gap-1 items-center'>
+            <RxCheckCircled />
+            80% of employees are active
+          </span>
         </CardFooter>
       </Card>
       <Card className='border-main'>
