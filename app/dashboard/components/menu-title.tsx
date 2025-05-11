@@ -1,9 +1,9 @@
-import { Satellite } from "lucide-react";
+import { RiDashboardLine } from 'react-icons/ri'
 
 export default function MenuTitle() {
   return (
     <h4 className='flex items-center'>
-      <Satellite 
+      <RiDashboardLine  
         size={40} 
         className='text-main'
       /> 
