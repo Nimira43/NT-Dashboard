@@ -6,9 +6,8 @@ import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
-  const employeesAttending = 149
-  const employeesAttendingPresent = (employeesAttending / totalEmployees) * 100
-
+  const employeesAttending = 128
+  const employeesAttendingPresent = ((employeesAttending / totalEmployees) * 100)
   return (
     <div className='grid lg:grid-cols-3 gap-4'>
       <Card>
@@ -50,15 +49,22 @@ export default function EmployeesStats() {
             ) : (
               <BiUserX className='text-xl' />
             )}
-            
             <div className='text-4xl font-light'>{employeesAttending}</div>
           </div>
         </CardContent>
         <CardFooter>
-          <span className='text-xs text-green-500 flex gap-1 items-center'>
-            <RxCheckCircled />
-            80% of employees are active
+          {employeesAttendingPresent > 75 ? ( 
+            <span className='text-xs text-green-500 flex gap-1 items-center'>
+              <RxCheckCircled />
+              {employeesAttendingPresent}% of employees are active
+            </span>
+          ) : (
+            <span className='text-xs text-red-500 flex gap-1 items-center'>
+              <RxCrossCircled />
+              {employeesAttendingPresent}% of employees are active
           </span>
+          )}
+          
         </CardFooter>
       </Card>
       <Card className='border-main'>
