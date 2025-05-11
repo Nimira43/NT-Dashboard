@@ -6,6 +6,7 @@ import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
+  const employeesAttending = 149
 
   return (
     <div className='grid lg:grid-cols-3 gap-4'>
@@ -44,7 +45,7 @@ export default function EmployeesStats() {
         <CardContent className='flex justify-between items-center'>
           <div className='flex gap-2 items-center'>
             <BiUserCheck className='text-xl' />
-            <div className='text-4xl font-light'>48</div>
+            <div className='text-4xl font-light'>{employeesAttending}</div>
           </div>
         </CardContent>
         <CardFooter>
