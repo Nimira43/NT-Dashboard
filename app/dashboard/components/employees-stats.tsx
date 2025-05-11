@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function EmployeesStats() {
   return (
@@ -8,6 +8,10 @@ export default function EmployeesStats() {
           <CardTitle className='font-normal text-base'>
             Total Employees
           </CardTitle>
+          <CardContent className='flex justify-between'>
+            <div>1</div>
+            <div>2</div>
+          </CardContent>
         </CardHeader>
       </Card>
       <Card>
