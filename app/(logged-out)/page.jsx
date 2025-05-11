@@ -5,11 +5,8 @@ import Link from 'next/link'
 export default function LandingPage() {
   return (
     <>
-      <h1 className='flex gap-2 items-center'>
-        <RiDashboardLine
-          size={50}
-          className='text-main-dark'
-        /> 
+      <h1 className='flex gap-2 items-center logo text-main'>
+        <RiDashboardLine size={50}/> 
         NT Dashboard
       </h1>
       <p>Project Management Support Dashboard</p>

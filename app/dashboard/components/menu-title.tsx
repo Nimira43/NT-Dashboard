@@ -7,7 +7,7 @@ export default function MenuTitle() {
         size={40} 
         className='text-main'
       /> 
-      <span className='pl-2 text-main'>NimiraTech</span>
+      <span className='pl-2 text-main logo'>NimiraTech</span>
 
     </h4>
   )
