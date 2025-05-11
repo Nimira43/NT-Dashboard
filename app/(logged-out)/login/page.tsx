@@ -6,7 +6,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from '@/components/ui/input'
 import { PasswordInput } from '@/components/ui/password-input'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Satellite } from 'lucide-react'
+import { RiDashboardLine } from 'react-icons/ri'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
@@ -34,7 +34,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <Satellite size={50} className='text-main-dark' />
+      <RiDashboardLine size={50} className='text-main' />
       <Card className='w-full max-w-sm'>
         <CardHeader>
           <CardTitle className='uppercase'>

@@ -11,7 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { format } from 'date-fns'
-import { CalendarIcon, Router, Satellite } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
+import { RiDashboardLine } from 'react-icons/ri'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
@@ -106,7 +107,7 @@ export default function SignupPage() {
   dobFromDate.setFullYear(dobFromDate.getFullYear() - 120)
   return (
     <>
-      <Satellite size={50} className='text-[#ea580c]' />
+      <RiDashboardLine size={50} className='text-main' />
       <Card className='w-full max-w-sm'>
         <CardHeader>
           <CardTitle className='uppercase'>
