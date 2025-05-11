@@ -11,27 +11,26 @@ export default function EmployeesStats() {
           <CardTitle className='font-normal text-base'>
             Total Employees
           </CardTitle>
-          <CardContent className='flex justify-between items-center'>
-            <div className='flex gap-2 items-center'>
-              <BiUser className='text-xl' />
-              <div className='text-4xl font-light'>73</div>
-            </div>
-            <div>
-              <Button
-                size='sm'
-                asChild
-                className='uppercase'
-              >
-                <Link
-                  href='/dashboard/employees'
-                >
-                  View
-                </Link>
-              </Button>
-            </div>
-            
-          </CardContent>
         </CardHeader>
+        <CardContent className='flex justify-between items-center'>
+          <div className='flex gap-2 items-center'>
+            <BiUser className='text-xl' />
+            <div className='text-4xl font-light'>73</div>
+          </div>
+          <div>
+            <Button
+              size='xs'
+              asChild
+              className='uppercase'
+            >
+              <Link
+                href='/dashboard/employees'
+              >
+                View
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
       </Card>
       <Card>
         <CardHeader>
