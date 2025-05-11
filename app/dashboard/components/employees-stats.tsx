@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { BiUser } from 'react-icons/bi'
 
 export default function EmployeesStats() {
   return (
@@ -9,7 +10,9 @@ export default function EmployeesStats() {
             Total Employees
           </CardTitle>
           <CardContent className='flex justify-between'>
-            <div>1</div>
+            <div className='flex gap-2'>
+              <BiUser />
+            </div>
             <div>2</div>
           </CardContent>
         </CardHeader>
