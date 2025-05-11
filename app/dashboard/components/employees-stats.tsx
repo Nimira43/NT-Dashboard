@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
-import { BiUser, BiUserCheck } from 'react-icons/bi'
+import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 
 export default function EmployeesStats() {
   return (
