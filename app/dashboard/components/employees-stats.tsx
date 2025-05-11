@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
+import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 
 export default function EmployeesStats() {
   return (
@@ -45,7 +46,7 @@ export default function EmployeesStats() {
           </div>
         </CardContent>
         <CardFooter>
-
+          <span></span>
         </CardFooter>
       </Card>
       <Card className='border-main'>
