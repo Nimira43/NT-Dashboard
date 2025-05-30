@@ -6,6 +6,7 @@ import kb from '@/public/images/Karl-Brent.jpg'
 import Link from 'next/link'
 import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
+import { GoThumbsup } from 'react-icons/go'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
@@ -83,6 +84,10 @@ export default function EmployeesStats() {
           </Avatar>
           <span className='text-2xl'>Karl Brent</span>
         </CardContent>
+        <CardFooter className='flex gap-2 items-center text-xs text-main'>
+          <GoThumbsup className='text-main' />
+          <span>Outstanding work Karl!</span>          
+        </CardFooter>
       </Card>
     </div>
   )
