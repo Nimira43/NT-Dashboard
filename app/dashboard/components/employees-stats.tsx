@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
+import kb from '@/public/images/Karl-Brent.jpg'
 import Link from 'next/link'
 import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
@@ -77,11 +78,10 @@ export default function EmployeesStats() {
         </CardHeader>
         <CardContent className='flex gap-2 items-center'>
           <Avatar>
-            <Image src
-            <AvatarFallback>
-              KB
-            </AvatarFallback>
+            <Image src={kb} alt='Employee Recognition'/>
+            <AvatarFallback>KB</AvatarFallback>
           </Avatar>
+          <span className='text-2xl'>Karl Brent</span>
         </CardContent>
       </Card>
     </div>
