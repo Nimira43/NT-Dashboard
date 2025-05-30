@@ -6,12 +6,12 @@ import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
-  const employeesAttending = 128
+  const employeesAttending = 118
   const employeesAttendingPresent = parseFloat(((employeesAttending / totalEmployees) * 100).toFixed(2))
   return (
     <div className='grid lg:grid-cols-3 gap-4'>
       <Card>
-        <CardHeader>
+        <CardHeader className='pb-2'>
           <CardTitle className='font-normal text-base'>
             Total Employees
           </CardTitle>
@@ -37,11 +37,11 @@ export default function EmployeesStats() {
         </CardContent>
       </Card>
       <Card>
-        <CardHeader>
+        <CardHeader className='pb-2'>
           <CardTitle className='font-normal text-base'>
             Employees Attending
           </CardTitle>
-        </CardHeader>
+        </CardHeader >
         <CardContent className='flex justify-between items-center'>
           <div className='flex gap-2 items-center'>
             {employeesAttendingPresent > 75 ? ( 
@@ -68,7 +68,7 @@ export default function EmployeesStats() {
         </CardFooter>
       </Card>
       <Card className='border-main'>
-      <CardHeader>
+      <CardHeader className='pb-2'>
           <CardTitle className='font-normal text-base'>
             Employee Recognition
           </CardTitle>
