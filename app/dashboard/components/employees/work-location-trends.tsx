@@ -12,7 +12,9 @@ export default function WorkLocationTrends() {
       <BarChart data={data}>
         <XAxis dataKey='name' fontSize={12} />
         <YAxis fontSize={12} />
-        <Tooltip />
+        <Tooltip 
+          wrapperClassName='dark:!bg-dark'
+        />
         <Legend 
           iconType='circle'
           formatter={(value) => {
