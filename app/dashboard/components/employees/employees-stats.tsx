@@ -8,6 +8,7 @@ import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 import { GoThumbsup } from 'react-icons/go'
 import { AiOutlineLaptop } from 'react-icons/ai'
+import WorkLocationTrends from './work-location-trends'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
@@ -99,7 +100,9 @@ export default function EmployeesStats() {
             <span>Employee Work Location Trends</span>
           </CardTitle>
         </CardHeader>
-        
+        <CardContent>
+          <WorkLocationTrends />
+        </CardContent>
       </Card>
     </>   
   )
