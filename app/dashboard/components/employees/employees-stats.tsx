@@ -99,6 +99,7 @@ export default function EmployeesStats() {
             <span>Employee Work Location Trends</span>
           </CardTitle>
         </CardHeader>
+        
       </Card>
     </>   
   )
