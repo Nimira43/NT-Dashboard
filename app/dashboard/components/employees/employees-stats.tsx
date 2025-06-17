@@ -12,7 +12,7 @@ import WorkLocationTrends from './work-location-trends'
 
 export default function EmployeesStats() {
   const totalEmployees = 173
-  const employeesAttending = 147
+  const employeesAttending = 130
   const employeesAttendingPresent = parseFloat(((employeesAttending / totalEmployees) * 100).toFixed(2))
   return (
     <>
