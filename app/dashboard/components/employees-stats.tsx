@@ -92,10 +92,11 @@ export default function EmployeesStats() {
           </CardFooter>
         </Card>
       </div>
-      <Card>
+      <Card className='my-4'>
         <CardHeader>
-          <CardTitle>
+          <CardTitle className='flex items-center text-lg gap-2 font-normal'>
             <AiOutlineLaptop />
+            <span>Employee Work Location Trends</span>
           </CardTitle>
         </CardHeader>
       </Card>
