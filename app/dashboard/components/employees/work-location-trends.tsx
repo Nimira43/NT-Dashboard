@@ -16,7 +16,16 @@ export default function WorkLocationTrends() {
         <XAxis dataKey='name' fontSize={12} />
         <YAxis fontSize={12} />
         <Tooltip 
-          wrapperClassName='dark:!bg-dark rounded-sm'
+          separator=': '
+          formatter={(value, name) => {
+            if (name === 'home') {
+              return [value, 'Work from Home']
+            } else if (name === 'office') {
+              return [value, 'Work from Office']
+            }
+          }}
+          labelClassName='font-medium'
+          wrapperClassName='dark:!bg-dark rounded-sm '
         />
         <Legend 
           iconType='circle'
