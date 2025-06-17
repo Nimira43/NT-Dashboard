@@ -25,7 +25,7 @@ export default function WorkLocationTrends() {
             }
           }}
           labelClassName='font-medium'
-          wrapperClassName='dark:!bg-dark rounded-sm '
+          wrapperClassName='dark:!bg-dark rounded-sm !text-sm'
         />
         <Legend 
           iconType='circle'
