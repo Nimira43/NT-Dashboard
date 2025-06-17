@@ -1,6 +1,6 @@
 'use client'
 
-import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { data } from './employee-attending-data'
 
 export default function WorkLocationTrends() {
@@ -13,6 +13,20 @@ export default function WorkLocationTrends() {
         <XAxis dataKey='name' fontSize={12} />
         <YAxis fontSize={12} />
         <Tooltip />
+        <Legend 
+          iconType='circle'
+          formatter={(value) => {
+            if (value === 'home') {
+              return (
+                <div className='text-sm'>Work from Home</div>
+              )
+            } else if (value === 'office') {
+              return (
+                <div className='text-sm'>Work from Office</div>
+              ) 
+            }
+          }}
+        />
         <Bar 
           dataKey='office' 
           stackId={1} 
