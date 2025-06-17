@@ -9,11 +9,14 @@ export default function WorkLocationTrends() {
       height={350}
       width='100%'
     >
-      <BarChart data={data}>
+      <BarChart 
+        data={data}
+        className='[&_.recharts-tooltip-cursor]:fill-grey-light-extra dark:[&_.recharts-tooltip-cursor]:fill-grey-dark'
+      >
         <XAxis dataKey='name' fontSize={12} />
         <YAxis fontSize={12} />
         <Tooltip 
-          wrapperClassName='dark:!bg-dark'
+          wrapperClassName='dark:!bg-dark rounded-sm'
         />
         <Legend 
           iconType='circle'
