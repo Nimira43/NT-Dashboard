@@ -8,7 +8,7 @@ import Image from 'next/image'
 import jl from '@/public/images/Jess-Lytton.jpg'
 import tw from '@/public/images/Tom-Wilkins.jpg'
 import kb from '@/public/images/Karl-Brent.jpg'
-import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const supervisors = [
   {
@@ -54,7 +54,7 @@ export default function TeamStats() {
           <CardContent className='flex justify-between items-center'>
             <div className='flex gap-2 items-center'>
               <TbUsers className='text-xl' />
-              <div className='text-4xl font-light'>5</div>
+              <div className='text-4xl font-light'>6</div>
             </div>
             <div>
               <Button
@@ -98,6 +98,9 @@ export default function TeamStats() {
                       </AvatarFallback>
                     </Avatar>
                   </TooltipTrigger>
+                  <TooltipContent>
+                    {supervisor.firstName} {supervisor.lastName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
