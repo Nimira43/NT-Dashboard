@@ -76,7 +76,7 @@ export default function TeamStats() {
               Supervisors
             </CardTitle>
           </CardHeader >
-          <CardContent className='flex justify-between items-center'>
+          <CardContent className='flex flex-wrap gap-2'>
             
           </CardContent>        
         </Card>
