@@ -8,6 +8,7 @@ import Image from 'next/image'
 import jl from '@/public/images/Jess-Lytton.jpg'
 import tw from '@/public/images/Tom-Wilkins.jpg'
 import kb from '@/public/images/Karl-Brent.jpg'
+import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const supervisors = [
   {
@@ -77,7 +78,29 @@ export default function TeamStats() {
             </CardTitle>
           </CardHeader >
           <CardContent className='flex flex-wrap gap-2'>
-            
+            {supervisors.map(supervisor => (
+              <TooltipProvider 
+                key={`${supervisor.firstName} ${supervisor.lastName}`}
+              >
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Avatar>
+                      {!!supervisor.avatar &&
+                        <Image 
+                          src={supervisor.avatar} 
+                          alt={`${supervisor.firstName} ${supervisor.lastName}'s photo.`}
+
+                        />
+                      }
+                      <AvatarFallback>
+                        {supervisor.firstName[0]}
+                        {supervisor.lastName[0]}
+                      </AvatarFallback>
+                    </Avatar>
+                  </TooltipTrigger>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
           </CardContent>        
         </Card>
         <Card>
