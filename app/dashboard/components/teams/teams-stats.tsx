@@ -1,14 +1,9 @@
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
-import kb from '@/public/images/Karl-Brent.jpg'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
-import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
-import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
-import { GoThumbsup } from 'react-icons/go'
+import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
-
 
 export default function EmployeesStats() {
   const totalEmployees = 173
@@ -25,8 +20,8 @@ export default function EmployeesStats() {
           </CardHeader>
           <CardContent className='flex justify-between items-center'>
             <div className='flex gap-2 items-center'>
-              <BiUser className='text-xl' />
-              <div className='text-4xl font-light'>Total Teams</div>
+              <TbUsers className='text-xl' />
+              <div className='text-4xl font-light'>5</div>
             </div>
             <div>
               <Button
