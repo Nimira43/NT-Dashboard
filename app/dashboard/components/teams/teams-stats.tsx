@@ -4,8 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
+import Image from 'next/image'
+import jl from '@/public/images/Jess-Lytton.jpg'
 
-export default function EmployeesStats() {
+export default function TeamStats() {
   
   return (
     <>

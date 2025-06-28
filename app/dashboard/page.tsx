@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import EmployeesStats from './components/employees/employees-stats'
-import TeamsStats from './components/teams-stats'
+import TeamsStats from './components/teams/teams-stats'
 
 export default function DashboardPage() {
   return (
@@ -9,7 +9,7 @@ export default function DashboardPage() {
         <TabsTrigger value='employees'>
           Employees Stats
         </TabsTrigger>
-        <TabsTrigger value='Teams'>
+        <TabsTrigger value='teams'>
           Teams Stats
         </TabsTrigger>
       </TabsList>
