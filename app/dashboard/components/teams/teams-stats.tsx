@@ -7,6 +7,33 @@ import { LuTicketCheck } from 'react-icons/lu'
 import Image from 'next/image'
 import jl from '@/public/images/Jess-Lytton.jpg'
 
+const supervisors = [
+  {
+    firstName: 'Saeed',
+    lastName: 'Malik'
+  },
+  {
+    firstName: 'Jess',
+    lastName: 'Lytton'
+  },
+  {
+    firstName: 'Karl',
+    lastName: 'Brent'
+  },
+  {
+    firstName: 'Celina',
+    lastName: 'Thompson'
+  },
+  {
+    firstName: 'Tom',
+    lastName: 'Wilkins'
+  },
+  {
+    firstName: 'Katie',
+    lastName: 'Rhodes'
+  },
+]
+
 export default function TeamStats() {
   
   return (
@@ -46,10 +73,9 @@ export default function TeamStats() {
           </CardHeader >
           <CardContent className='flex justify-between items-center'>
             
-          </CardContent>
-          
+          </CardContent>        
         </Card>
-        <Card className='border-main'>
+        <Card>
         <CardHeader className='pb-2'>
             <CardTitle className='font-normal text-base'>
               Team Distribution
