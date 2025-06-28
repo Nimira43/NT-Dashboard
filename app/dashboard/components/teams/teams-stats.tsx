@@ -6,9 +6,7 @@ import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
 
 export default function EmployeesStats() {
-  const totalEmployees = 173
-  const employeesAttending = 130
-  const employeesAttendingPresent = parseFloat(((employeesAttending / totalEmployees) * 100).toFixed(2))
+  
   return (
     <>
       <div className='grid lg:grid-cols-3 gap-4'>
