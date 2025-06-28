@@ -9,6 +9,7 @@ import jl from '@/public/images/Jess-Lytton.jpg'
 import tw from '@/public/images/Tom-Wilkins.jpg'
 import kb from '@/public/images/Karl-Brent.jpg'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { BiStar } from 'react-icons/bi'
 
 const supervisors = [
   {
@@ -73,8 +74,9 @@ export default function TeamStats() {
         </Card>
         <Card>
           <CardHeader className='pb-2'>
-            <CardTitle className='font-normal text-base'>
-              Supervisors
+            <CardTitle className='font-normal text-base flex justify-between items-center'>
+              <span>Supervisors</span>
+              <BiStar />
             </CardTitle>
           </CardHeader >
           <CardContent className='flex flex-wrap gap-2'>
