@@ -20,13 +20,13 @@ export default function EmployeesStats() {
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='font-normal text-base'>
-              Total Employees
+              Total Teams
             </CardTitle>
           </CardHeader>
           <CardContent className='flex justify-between items-center'>
             <div className='flex gap-2 items-center'>
               <BiUser className='text-xl' />
-              <div className='text-4xl font-light'>{totalEmployees}</div>
+              <div className='text-4xl font-light'>Total Teams</div>
             </div>
             <div>
               <Button
@@ -35,7 +35,7 @@ export default function EmployeesStats() {
                 className='uppercase'
               >
                 <Link
-                  href='/dashboard/employees'
+                  href='/dashboard/teams'
                 >
                   View
                 </Link>
@@ -46,58 +46,30 @@ export default function EmployeesStats() {
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='font-normal text-base'>
-              Employees Attending
+              Supervisors
             </CardTitle>
           </CardHeader >
           <CardContent className='flex justify-between items-center'>
-            <div className='flex gap-2 items-center'>
-              {employeesAttendingPresent > 75 ? ( 
-                <BiUserCheck className='text-xl' />
-              ) : (
-                <BiUserX className='text-xl' />
-              )}
-              <div className='text-4xl font-light'>{employeesAttending}</div>
-            </div>
-          </CardContent>
-          <CardFooter>
-            {employeesAttendingPresent > 75 ? ( 
-              <span className='text-xs text-green-500 flex gap-1 items-center'>
-                <RxCheckCircled />
-                {employeesAttendingPresent}% of employees are active
-              </span>
-            ) : (
-              <span className='text-xs text-red-500 flex gap-1 items-center'>
-                <RxCrossCircled />
-                {employeesAttendingPresent}% of employees are active
-            </span>
-            )}
             
-          </CardFooter>
+          </CardContent>
+          
         </Card>
         <Card className='border-main'>
         <CardHeader className='pb-2'>
             <CardTitle className='font-normal text-base'>
-              Employee Recognition
+              Team Distribution
             </CardTitle>
           </CardHeader>
           <CardContent className='flex gap-2 items-center'>
-            <Avatar>
-              <Image src={kb} alt='Employee Recognition'/>
-              <AvatarFallback>KB</AvatarFallback>
-            </Avatar>
-            <span className='text-2xl'>Karl Brent</span>
+
           </CardContent>
-          <CardFooter className='flex gap-2 items-center text-xs text-main'>
-            <GoThumbsup className='text-main' />
-            <span>Outstanding work Karl!</span>          
-          </CardFooter>
         </Card>
       </div>
       <Card className='my-4'>
         <CardHeader>
           <CardTitle className='flex items-center text-lg gap-2 font-normal'>
             <LuTicketCheck />
-            <span>Support Tickets Re</span>
+            <span>Support Tickets Resolved</span>
           </CardTitle>
         </CardHeader>
         <CardContent className='pl-0'>
