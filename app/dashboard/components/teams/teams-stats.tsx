@@ -6,31 +6,36 @@ import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
 import Image from 'next/image'
 import jl from '@/public/images/Jess-Lytton.jpg'
+import tw from '@/public/images/Tom-Wilkins.jpg'
+import kb from '@/public/images/Karl-Brent.jpg'
 
 const supervisors = [
   {
     firstName: 'Saeed',
-    lastName: 'Malik'
+    lastName: 'Malik',
   },
   {
     firstName: 'Jess',
-    lastName: 'Lytton'
+    lastName: 'Lytton',
+    avatar: jl,
   },
   {
     firstName: 'Karl',
-    lastName: 'Brent'
+    lastName: 'Brent',
+    avatar: kb,
   },
   {
-    firstName: 'Celina',
-    lastName: 'Thompson'
+    firstName: 'Selina',
+    lastName: 'Thompson',
   },
   {
     firstName: 'Tom',
-    lastName: 'Wilkins'
+    lastName: 'Wilkins',
+    avatar: tw,
   },
   {
-    firstName: 'Katie',
-    lastName: 'Rhodes'
+    firstName: 'Amy',
+    lastName: 'Rhodes',
   },
 ]
 
