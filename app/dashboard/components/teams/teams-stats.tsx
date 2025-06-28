@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 import { GoThumbsup } from 'react-icons/go'
-import { AiOutlineLaptop } from 'react-icons/ai'
+import { LuTicketCheck } from 'react-icons/lu'
 
 
 export default function EmployeesStats() {
@@ -96,8 +96,8 @@ export default function EmployeesStats() {
       <Card className='my-4'>
         <CardHeader>
           <CardTitle className='flex items-center text-lg gap-2 font-normal'>
-            <AiOutlineLaptop />
-            <span>Employee Work Location Trends</span>
+            <LuTicketCheck />
+            <span>Support Tickets Re</span>
           </CardTitle>
         </CardHeader>
         <CardContent className='pl-0'>
