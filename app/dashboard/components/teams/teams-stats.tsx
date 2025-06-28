@@ -8,7 +8,7 @@ import { BiUser, BiUserCheck, BiUserX } from 'react-icons/bi'
 import { RxCrossCircled, RxCheckCircled } from 'react-icons/rx'
 import { GoThumbsup } from 'react-icons/go'
 import { AiOutlineLaptop } from 'react-icons/ai'
-import WorkLocationTrends from './work-location-trends'
+
 
 export default function EmployeesStats() {
   const totalEmployees = 173
@@ -101,7 +101,7 @@ export default function EmployeesStats() {
           </CardTitle>
         </CardHeader>
         <CardContent className='pl-0'>
-          <WorkLocationTrends />
+          Teams Chart
         </CardContent>
       </Card>
     </>   
