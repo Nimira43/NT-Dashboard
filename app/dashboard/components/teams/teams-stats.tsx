@@ -116,7 +116,7 @@ export default function TeamStats() {
               <AiOutlinePieChart />
             </CardTitle>
           </CardHeader>
-          <CardContent className='flex gap-2 items-center'>
+          <CardContent>
 
           </CardContent>
         </Card>
