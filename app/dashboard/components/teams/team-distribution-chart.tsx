@@ -1,3 +1,7 @@
+'use client'
+
+import { ResponsiveContainer } from 'recharts'
+
 export default function TeamDistributionChart() {
   const data= [
     {
@@ -18,6 +22,6 @@ export default function TeamDistributionChart() {
   ]
 
   return (
-    <div>TeamDistributionChart</div>
+    <ResponsiveContainer></ResponsiveContainer>
   )
 }
