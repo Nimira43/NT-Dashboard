@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
+import { AiOutlinePieChart } from 'react-icons/ai'
 import Image from 'next/image'
 import jl from '@/public/images/Jess-Lytton.jpg'
 import tw from '@/public/images/Tom-Wilkins.jpg'
@@ -110,8 +111,9 @@ export default function TeamStats() {
         </Card>
         <Card>
         <CardHeader className='pb-2'>
-            <CardTitle className='font-normal text-base'>
-              Team Distribution
+            <CardTitle className='font-normal text-base flex justify-between items-center'>
+              <span>Team Distrubtion</span>
+              <AiOutlinePieChart />
             </CardTitle>
           </CardHeader>
           <CardContent className='flex gap-2 items-center'>
