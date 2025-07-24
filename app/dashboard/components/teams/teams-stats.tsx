@@ -11,6 +11,7 @@ import tw from '@/public/images/Tom-Wilkins.jpg'
 import kb from '@/public/images/Karl-Brent.jpg'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { BiStar } from 'react-icons/bi'
+import TeamDistributionChart from './team-distribution-chart'
 
 const supervisors = [
   {
@@ -112,12 +113,12 @@ export default function TeamStats() {
         <Card>
         <CardHeader className='pb-2'>
             <CardTitle className='font-normal text-base flex justify-between items-center'>
-              <span>Team Distrubtion</span>
+              <span>Team Distribution</span>
               <AiOutlinePieChart />
             </CardTitle>
           </CardHeader>
           <CardContent>
-
+            <TeamDistributionChart />
           </CardContent>
         </Card>
       </div>
