@@ -1,6 +1,6 @@
 'use client'
 
-import { Pie, PieChart, ResponsiveContainer } from 'recharts'
+import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 
 export default function TeamDistributionChart() {
   const data= [
@@ -27,8 +27,17 @@ export default function TeamDistributionChart() {
       height={150}
     >
       <PieChart>
-        <Pie>
-          
+        <Pie 
+          data={data} 
+          dataKey='value'
+          nameKey='name'
+        >
+          {data.map((dataItem, i) => (
+            <Cell 
+              key={i}
+              fill={dataItem.colour} 
+            />
+          ))}
         </Pie>
       </PieChart>
     </ResponsiveContainer>
