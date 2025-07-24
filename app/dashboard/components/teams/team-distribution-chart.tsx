@@ -1,6 +1,6 @@
 'use client'
 
-import { ResponsiveContainer } from 'recharts'
+import { Pie, PieChart, ResponsiveContainer } from 'recharts'
 
 export default function TeamDistributionChart() {
   const data= [
@@ -22,6 +22,15 @@ export default function TeamDistributionChart() {
   ]
 
   return (
-    <ResponsiveContainer></ResponsiveContainer>
+    <ResponsiveContainer
+      width='100%'
+      height={150}
+    >
+      <PieChart>
+        <Pie>
+          
+        </Pie>
+      </PieChart>
+    </ResponsiveContainer>
   )
 }
