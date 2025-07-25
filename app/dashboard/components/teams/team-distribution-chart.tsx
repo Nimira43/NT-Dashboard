@@ -28,7 +28,10 @@ export default function TeamDistributionChart() {
       height={150}
     >
       <PieChart>
-        <Tooltip />
+        <Tooltip 
+          labelClassName='font-medium'
+          wrapperClassName='[&_.recharts-tooltip-item]:!text-white dark:!bg-dark rounded-sm !text-sm'
+        />
         <Pie 
           data={data} 
           dataKey='value'
