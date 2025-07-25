@@ -30,7 +30,7 @@ export default function TeamDistributionChart() {
       <PieChart>
         <Tooltip 
           labelClassName='font-medium'
-          wrapperClassName='[&_.recharts-tooltip-item]:!text-white dark:!bg-dark rounded-sm !text-sm'
+          wrapperClassName='dark:[&_.recharts-tooltip-item]:!text-white [&_.recharts-tooltip-item]:!text-black dark:!bg-dark rounded-sm !text-sm'
         />
         <Pie 
           data={data} 
