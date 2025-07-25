@@ -1,22 +1,23 @@
 'use client'
 
-import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
+
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 
 export default function TeamDistributionChart() {
   const data= [
     {
       name: 'Eagles',
-      value: 37,
+      value: 31,
       colour: '#ff4500'
     },
     {
       name: 'Lions',
-      value: 34,
+      value: 39,
       colour: '#ffd700'
     },
     {
       name: 'Rhinos',
-      value: 29,
+      value: 30,
       colour: '#00ff00'
     }
   ]
@@ -27,6 +28,7 @@ export default function TeamDistributionChart() {
       height={150}
     >
       <PieChart>
+        <Tooltip />
         <Pie 
           data={data} 
           dataKey='value'
