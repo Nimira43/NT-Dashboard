@@ -117,7 +117,7 @@ export default function TeamStats() {
               <AiOutlinePieChart />
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className='pb-0'>
             <TeamDistributionChart />
           </CardContent>
         </Card>
