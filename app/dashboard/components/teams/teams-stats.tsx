@@ -12,6 +12,7 @@ import kb from '@/public/images/Karl-Brent.jpg'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
+import SupportTicketsResolved from './support-tickets-resolved'
 
 const supervisors = [
   {
@@ -130,7 +131,7 @@ export default function TeamStats() {
           </CardTitle>
         </CardHeader>
         <CardContent className='pl-0'>
-          Teams Chart
+          <SupportTicketsResolved />
         </CardContent>
       </Card>
     </>   
