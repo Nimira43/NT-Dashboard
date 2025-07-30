@@ -6,15 +6,11 @@ import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
 import { AiOutlinePieChart } from 'react-icons/ai'
 import Image from 'next/image'
-import jl from '@/public/images/Jess-Lytton.jpg'
-import tw from '@/public/images/Tom-Wilkins.jpg'
-import kb from '@/public/images/Karl-Brent.jpg'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
 import SupportTicketsResolved from './support-tickets-resolved'
-
-
+import { supervisors } from './teams.data'
 
 export default function TeamStats() {
   
