@@ -4,23 +4,6 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 
 export default function TeamDistributionChart() {
-  const data= [
-    {
-      name: 'Eagles',
-      value: 31,
-      colour: '#ff4500'
-    },
-    {
-      name: 'Lions',
-      value: 39,
-      colour: '#ffd700'
-    },
-    {
-      name: 'Rhinos',
-      value: 30,
-      colour: '#00ff00'
-    }
-  ]
 
   return (
     <ResponsiveContainer

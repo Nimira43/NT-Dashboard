@@ -31,3 +31,21 @@ export const supervisors = [
     lastName: 'Rhodes',
   },
 ]
+
+export const data = [
+    {
+      name: 'Eagles',
+      value: 31,
+      colour: '#ff4500'
+    },
+    {
+      name: 'Lions',
+      value: 39,
+      colour: '#ffd700'
+    },
+    {
+      name: 'Rhinos',
+      value: 30,
+      colour: '#00ff00'
+    }
+  ]
