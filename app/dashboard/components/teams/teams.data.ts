@@ -1,4 +1,8 @@
-const supervisors = [
+import jl from '@/public/images/Jess-Lytton.jpg'
+import tw from '@/public/images/Tom-Wilkins.jpg'
+import kb from '@/public/images/Karl-Brent.jpg'
+
+export const supervisors = [
   {
     firstName: 'Saeed',
     lastName: 'Malik',
