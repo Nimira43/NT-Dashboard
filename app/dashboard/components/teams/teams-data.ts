@@ -50,7 +50,7 @@ export const data = [
     }
   ]
 
-  const ticketsData = [
+  export const ticketsData = [
     {
       name: 'Jan',
       eagles: 29,
