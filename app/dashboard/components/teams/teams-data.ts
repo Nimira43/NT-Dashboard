@@ -49,3 +49,78 @@ export const data = [
       colour: '#00ff00'
     }
   ]
+
+  const ticketsData = [
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+    {
+      name: 'Jan',
+      eagles: 29,
+      lions: 38,
+      rhinos: 32,
+    },
+  ]
