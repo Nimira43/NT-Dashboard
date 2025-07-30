@@ -14,35 +14,7 @@ import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
 import SupportTicketsResolved from './support-tickets-resolved'
 
-const supervisors = [
-  {
-    firstName: 'Saeed',
-    lastName: 'Malik',
-  },
-  {
-    firstName: 'Jess',
-    lastName: 'Lytton',
-    avatar: jl,
-  },
-  {
-    firstName: 'Karl',
-    lastName: 'Brent',
-    avatar: kb,
-  },
-  {
-    firstName: 'Selina',
-    lastName: 'Thompson',
-  },
-  {
-    firstName: 'Tom',
-    lastName: 'Wilkins',
-    avatar: tw,
-  },
-  {
-    firstName: 'Amy',
-    lastName: 'Rhodes',
-  },
-]
+
 
 export default function TeamStats() {
   
