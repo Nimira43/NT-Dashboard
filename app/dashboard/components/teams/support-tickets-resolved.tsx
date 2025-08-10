@@ -13,26 +13,23 @@ export default function SupportTicketsResolved() {
         data={ticketsData}
       >
         <CartesianGrid strokeDasharray='3' />
-        <Line dataKey='eagles' />
-        <Line dataKey='lions' />
-        <Line dataKey='rhinos' />
+        <Line 
+          dataKey='eagles' 
+          type='monotone'
+          stroke='#ff4500'
+        />
+        <Line 
+          dataKey='lions' 
+          type='monotone'
+          stroke='#ffd700'
+        />
+        <Line 
+          dataKey='rhinos' 
+          type='monotone'
+          stroke='00ff00'
+        />
       </LineChart>
 
     </ResponsiveContainer>
   )
 }
-// {
-//       name: 'Eagles',
-//       value: 31,
-//       colour: '#ff4500'
-//     },
-//     {
-//       name: 'Lions',
-//       value: 39,
-//       colour: '#ffd700'
-//     },
-//     {
-//       name: 'Rhinos',
-//       value: 30,
-//       colour: '#00ff00'
-//     }
