@@ -1,6 +1,6 @@
 'use client'
 
-import { Line, LineChart, ResponsiveContainer } from 'recharts'
+import { CartesianGrid, Line, LineChart, ResponsiveContainer } from 'recharts'
 import { ticketsData } from './teams-data'
 
 export default function SupportTicketsResolved() {
@@ -9,7 +9,10 @@ export default function SupportTicketsResolved() {
       height={350}
       width='100%'
     >
-      <LineChart data={ticketsData}>
+      <LineChart 
+        data={ticketsData}
+      >
+        <CartesianGrid strokeDasharray='3' />
         <Line dataKey='eagles' />
         <Line dataKey='lions' />
         <Line dataKey='rhinos' />
