@@ -1,6 +1,6 @@
 'use client'
 
-import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { ticketsData } from './teams-data'
 
 export default function SupportTicketsResolved() {
@@ -12,6 +12,10 @@ export default function SupportTicketsResolved() {
       <LineChart 
         data={ticketsData}
       >
+        <Tooltip 
+          labelClassName='font-medium'
+          wrapperClassName='dark:!bg-dark rounded-sm !text-sm'
+        />
         <XAxis 
           fontSize={12} 
           dataKey='name' 
