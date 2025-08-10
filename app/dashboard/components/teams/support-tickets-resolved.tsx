@@ -10,7 +10,9 @@ export default function SupportTicketsResolved() {
       width='100%'
     >
       <LineChart data={ticketsData}>
-        <Line />
+        <Line dataKey='eagles' />
+        <Line dataKey='lions' />
+        <Line dataKey='rhinos' />
       </LineChart>
 
     </ResponsiveContainer>
