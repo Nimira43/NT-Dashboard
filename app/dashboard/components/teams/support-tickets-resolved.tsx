@@ -1,6 +1,6 @@
 'use client'
 
-import { CartesianGrid, Line, LineChart, ResponsiveContainer } from 'recharts'
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import { ticketsData } from './teams-data'
 
 export default function SupportTicketsResolved() {
@@ -12,7 +12,16 @@ export default function SupportTicketsResolved() {
       <LineChart 
         data={ticketsData}
       >
-        <CartesianGrid strokeDasharray='3' />
+        <XAxis 
+          fontSize={12} 
+          dataKey='name' 
+        />
+        <YAxis 
+          fontSize={12} 
+        />
+        <CartesianGrid 
+          strokeDasharray='3' 
+        />
         <Line 
           dataKey='eagles' 
           type='monotone'
@@ -26,10 +35,9 @@ export default function SupportTicketsResolved() {
         <Line 
           dataKey='rhinos' 
           type='monotone'
-          stroke='00ff00'
+          stroke='#00ff00'
         />
       </LineChart>
-
     </ResponsiveContainer>
   )
 }

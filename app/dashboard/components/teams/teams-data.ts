@@ -71,7 +71,7 @@ export const data = [
     },
     {
       name: 'Apr',
-      eagles: 18,
+      eagles: 14,
       lions: 30,
       rhinos: 22,
     },
