@@ -9,7 +9,7 @@ export default function DashboardLayout(
       <MainMenu 
         className='hidden md:flex'
       />
-      <div className='p-4block md:hidden sticky top-0 left-0 bg-background border-b border-border'>
+      <div className='p-4 flex justify-between md:hidden sticky top-0 left-0 bg-background border-b border-border'>
         <MenuTitle />
       </div>
       <div className='overflow-auto py-2 px-4'>
