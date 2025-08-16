@@ -1,3 +1,5 @@
+'use client'
+
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import MainMenu from './components/main-menu'
 import MenuTitle from './components/menu-title'
@@ -9,7 +11,7 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
-  const isDesktop = useMediaQuery('min-width(768px)')
+  const isDesktop = useMediaQuery('(min-width: 768px)')
 
   return (
     <div className='grid md:grid-cols-[250px_1fr] h-screen'>
