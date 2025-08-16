@@ -1,4 +1,4 @@
-import { Drawer, DrawerTrigger } from '@/components/ui/drawer'
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import MainMenu from './components/main-menu'
 import MenuTitle from './components/menu-title'
 import { HiMenu } from 'react-icons/hi'
@@ -17,6 +17,9 @@ export default function DashboardLayout(
           <DrawerTrigger>
             <HiMenu />
           </DrawerTrigger>
+          <DrawerContent>
+            <MainMenu />
+          </DrawerContent>
         </Drawer>
       </div>
       <div className='overflow-auto py-2 px-4'>
