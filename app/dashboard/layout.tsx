@@ -5,7 +5,9 @@ export default function DashboardLayout(
 ) {
   return (
     <div className='grid md:grid-cols-[250px_1fr] h-screen'>
-      <MainMenu />
+      <MainMenu 
+        className='hidden md:flex'
+      />
       <div className='sticky top-0 left-0 bg-background'>
         mobile menu
       </div>

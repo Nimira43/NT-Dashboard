@@ -3,11 +3,20 @@ import MenuItem from './menu-item'
 import MenuTitle from './menu-title'
 import Link from 'next/link'
 import { LightDarkToggle } from '@/components/ui/light-dark-toggle'
+import { cn } from '@/lib/utils'
 
-export default function MainMenu() {
-  
+export default function MainMenu(
+  {className}: {
+    className?: string
+  }) {
   return (
-    <nav className='bg-grey-light-extra dark:bg-grey-dark overflow-auto p-4 flex flex-col '>
+    <nav 
+      className={
+        cn(
+          `bg-grey-light-extra dark:bg-grey-dark overflow-auto p-4 flex flex-col`, 
+          className
+        )
+      }>
       <header className='border-b border-b-main pb-4'>
         <MenuTitle />
       </header>
