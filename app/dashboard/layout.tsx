@@ -8,7 +8,7 @@ export default function DashboardLayout(
       <MainMenu 
         className='hidden md:flex'
       />
-      <div className='sticky top-0 left-0 bg-background'>
+      <div className='block md:hidden sticky top-0 left-0 bg-background'>
         mobile menu
       </div>
       <div className='overflow-auto py-2 px-4'>
