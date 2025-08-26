@@ -13,7 +13,7 @@ export default function MainMenu(
     <nav 
       className={
         cn(
-          `bg-grey-light-extra dark:bg-grey-dark overflow-auto p-4 flex flex-col`, 
+          `md:bg-grey-light-extra md:dark:bg-grey-dark overflow-auto p-4 flex flex-col`, 
           className
         )
       }>
