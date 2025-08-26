@@ -17,7 +17,7 @@ export default function MainMenu(
           className
         )
       }>
-      <header className='border-b border-b-main pb-4'>
+      <header className='hidden md:block border-b border-b-main pb-4'>
         <MenuTitle />
       </header>
       <div className='py-4 grow uppercase
