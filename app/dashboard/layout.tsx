@@ -25,7 +25,8 @@ export default function DashboardLayout({
           <MenuTitle />
           <Drawer
             direction='right'
-          
+            open={mobileMenuOpen}
+            onOpenChange={(open) => setMobileMenuOpen(open)}
           >
             <DrawerTrigger>
               <HiMenu />
