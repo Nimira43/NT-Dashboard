@@ -26,6 +26,7 @@ export default function DashboardLayout({
           <Drawer
             direction='right'
             open={mobileMenuOpen}
+            onClose={() => setMobileMenuOpen(false)}
             onOpenChange={(open) => setMobileMenuOpen(open)}
           >
             <DrawerTrigger>
