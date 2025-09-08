@@ -5,6 +5,7 @@ import MainMenu from './components/main-menu'
 import MenuTitle from './components/menu-title'
 import { HiMenu } from 'react-icons/hi'
 import { useMediaQuery } from '@/hooks/use-media-query'
+import { useState } from 'react'
 
 export default function DashboardLayout({
   children
@@ -12,6 +13,7 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   const isDesktop = useMediaQuery('(min-width: 768px)')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false) 
 
   return (
     <div className='md:grid md:grid-cols-[250px_1fr] h-screen'>
@@ -23,6 +25,7 @@ export default function DashboardLayout({
           <MenuTitle />
           <Drawer
             direction='right'
+          
           >
             <DrawerTrigger>
               <HiMenu />
