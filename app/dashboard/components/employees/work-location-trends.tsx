@@ -1,7 +1,7 @@
 'use client'
 
 import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { employeeAttendingData } from './employee-attending-data'
+import { employeeAttendingData } from '@/data/mock-data'
 
 export default function WorkLocationTrends() {
   return (
