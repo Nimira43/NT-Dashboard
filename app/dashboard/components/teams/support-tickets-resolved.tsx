@@ -1,7 +1,7 @@
 'use client'
 
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { ticketsData } from './teams-data'
+import { ticketsData } from '@/data/mock-data'
 
 export default function SupportTicketsResolved() {
   return (
