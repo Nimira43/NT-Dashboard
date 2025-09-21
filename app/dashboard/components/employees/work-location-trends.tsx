@@ -1,7 +1,7 @@
 'use client'
 
 import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { data } from './employee-attending-data'
+import { employeeAttendingData } from './employee-attending-data'
 
 export default function WorkLocationTrends() {
   return (
@@ -10,7 +10,7 @@ export default function WorkLocationTrends() {
       width='100%'
     >
       <BarChart 
-        data={data}
+        data={employeeAttendingData}
         className='[&_.recharts-tooltip-cursor]:fill-grey-light-extra dark:[&_.recharts-tooltip-cursor]:fill-grey-dark'
       >
         <XAxis dataKey='name' fontSize={12} />

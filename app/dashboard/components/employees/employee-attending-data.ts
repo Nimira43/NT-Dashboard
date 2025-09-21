@@ -1,4 +1,4 @@
-export const data = [
+export const employeeAttendingData = [
   {
     name: 'Jan',
     office: 128,
