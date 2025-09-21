@@ -8,8 +8,10 @@ export default function Loading() {
           Employees
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        
+      <CardContent 
+        className='grid grid-cols-[60px_1fr_1fr_1fr_1fr]'
+      >
+
       </CardContent>
     </Card>
   )
