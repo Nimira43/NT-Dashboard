@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function Loading() {
   return (
@@ -8,6 +8,9 @@ export default function Loading() {
           Employees
         </CardTitle>
       </CardHeader>
+      <CardContent>
+        
+      </CardContent>
     </Card>
   )
 }
