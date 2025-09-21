@@ -32,7 +32,7 @@ export const supervisors = [
   },
 ]
 
-export const data = [
+export const teamsData = [
     {
       name: 'Eagles',
       value: 31,

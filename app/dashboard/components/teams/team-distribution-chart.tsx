@@ -1,6 +1,6 @@
 'use client'
 
-import { data } from './teams-data'
+import { teamsData } from './teams-data'
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 
 export default function TeamDistributionChart() {
@@ -16,11 +16,11 @@ export default function TeamDistributionChart() {
           wrapperClassName='dark:[&_.recharts-tooltip-item]:!text-white [&_.recharts-tooltip-item]:!text-black dark:!bg-dark rounded-sm !text-sm'
         />
         <Pie 
-          data={data} 
+          data={teamsData} 
           dataKey='value'
           nameKey='name'
         >
-          {data.map((dataItem, i) => (
+          {teamsData.map((dataItem, i) => (
             <Cell 
               key={i}
               fill={dataItem.colour} 
