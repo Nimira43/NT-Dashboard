@@ -26,20 +26,23 @@ export const supervisors = [
 
 export const employees = [
   {
+    id: 1,
     firstName: 'Jess',
     lastName: 'Lytton',
     avatar: jl,
   },
   {
+    id: 4,
     firstName: 'Karl',
     lastName: 'Brent',
     avatar: kb,
   },
-  {
+  { id: 6,
     firstName: 'Selina',
     lastName: 'Thompson',
   },
   {
+    id: 9,
     firstName: 'Tom',
     lastName: 'Wilkins',
     avatar: tw,
