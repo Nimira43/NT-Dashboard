@@ -31,7 +31,7 @@ export const employees = [
     lastName: 'Lytton',
     teamName: '',
     isTeamLeader: true,
-    avatar: jl,
+    avatar: "/images/jl.jpg",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const employees = [
     lastName: 'Brent',
     teamName: '',
     isTeamLeader: true,
-    avatar: kb,
+    avatar: "/images/kb.jpg",
   },
   { id: 6,
     firstName: 'Selina',
@@ -53,7 +53,7 @@ export const employees = [
     lastName: 'Wilkins',
     teamName: '',
     isTeamLeader: true,
-    avatar: tw,
+    avatar: "/images/tw.jpg",
   },
 ]
 
