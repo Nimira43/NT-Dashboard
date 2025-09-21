@@ -1,6 +1,6 @@
 'use client'
 
-import { teamsData } from './teams-data'
+import { teamsData } from '@/data/mock-data'
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 
 export default function TeamDistributionChart() {
