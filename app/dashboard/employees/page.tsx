@@ -1,3 +1,5 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { DataTable } from '@/components/ui/data-table'
 import { employees } from '@/data/mock-data'
 import { setTimeout } from 'timers/promises'
 
@@ -5,6 +7,20 @@ export default async function EmployeesPage() {
   await setTimeout(5000)
 
   return (
-    <div>EmployeesPage</div>
+     <Card>
+      <CardHeader>
+        <CardTitle>
+          Employees
+        </CardTitle>
+      </CardHeader>
+      <CardContent 
+        className='grid grid-cols-[60px_1fr_1fr_1fr_1fr] gap-4 items-center'
+      >
+        <DataTable 
+          
+
+        />
+      </CardContent>
+    </Card>
   )
 }
