@@ -14,9 +14,7 @@ export default async function EmployeesPage() {
           Employees
         </CardTitle>
       </CardHeader>
-      <CardContent 
-        className='grid grid-cols-[60px_1fr_1fr_1fr_1fr] gap-4 items-center'
-      >
+      <CardContent>
         <DataTable 
           columns={columns}
           data={employees}
