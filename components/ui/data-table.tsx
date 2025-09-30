@@ -23,7 +23,9 @@ export function DataTable<TData, TValue>({
     <div className='rounded-md border'>
       <Table>
         <TableHeader>
-          Header
+          {table.getHeaderGroups().map((headerGroup) => (
+            
+          ))}
         </TableHeader>
         <TableBody>
           Body
