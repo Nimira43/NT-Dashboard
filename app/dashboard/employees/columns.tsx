@@ -10,3 +10,10 @@ export type Employee = {
   isTeamLeader: boolean,
   avatar: string,
 }
+
+export const columns: ColumnDef<Employee>[] = [
+  {
+    accessorKey: 'avatar',
+    header: 'Status'
+  }
+]
