@@ -14,6 +14,22 @@ export type Employee = {
 export const columns: ColumnDef<Employee>[] = [
   {
     accessorKey: 'avatar',
-    header: 'Status'
-  }
+    header: ''
+  },
+  {
+    accessorKey: 'firstName',
+    header: 'First Name'
+   },
+  {
+    accessorKey: 'lastName',
+    header: 'Last Name'
+  },
+  {
+    accessorKey: 'teamName',
+    header: 'Team'
+  },
+  {
+    accessorKey: 'isTeamLeader',
+    header: ''
+  },
 ]
