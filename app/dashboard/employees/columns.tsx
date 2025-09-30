@@ -8,7 +8,7 @@ export type Employee = {
   lastName: string,
   teamName: string,
   isTeamLeader: boolean,
-  avatar: string,
+  avatar?: string,
 }
 
 export const columns: ColumnDef<Employee>[] = [

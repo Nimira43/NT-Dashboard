@@ -1,6 +1,7 @@
 import jl from '@/public/images/Jessica-Lytton.jpg'
 import tw from '@/public/images/Tom-Wilkins.jpg'
 import kb from '@/public/images/Karl-Brent.jpg'
+import { type Employee } from '@/app/dashboard/employees/columns'
 
 export const supervisors = [
   {
@@ -24,7 +25,7 @@ export const supervisors = [
   },
 ]
 
-export const employees = [
+export const employees: Employee[] = [
   {
     id: 1,
     firstName: 'Jessica',
