@@ -6,6 +6,7 @@ import MenuTitle from './components/menu-title'
 import { HiMenu } from 'react-icons/hi'
 import { useMediaQuery } from '@/hooks/use-media-query'
 import { useState } from 'react'
+import TodayDate from '@/utils/today-date'
 
 export default function DashboardLayout({
   children
@@ -40,7 +41,7 @@ export default function DashboardLayout({
       )}
       
       <div className='overflow-auto py-2 px-4'>
-        
+        <TodayDate />
         {children}
       </div>
     </div>
