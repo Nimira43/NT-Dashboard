@@ -90,6 +90,8 @@ export function DataTable<TData, TValue>({
         <Button
           variant='outline'
           className='hidden h-8 w-8 p-0 lg:flex'
+          onClick={() => table.setPageIndex(0)}
+          disabled={!table.getCanPreviousPage()}
         >
           <TbChevronsLeft />
         </Button>
