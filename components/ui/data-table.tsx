@@ -84,6 +84,9 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
+      <div className='flex items-center space-x-2'>
+        
+      </div>
     </div>
   )
 }
