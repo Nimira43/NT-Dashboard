@@ -11,5 +11,6 @@ function TodayDate() {
       month: 'long',
       year: 'numeric'
     })
-  })
+    setDate(formattedDate)
+  }, [])
 }
