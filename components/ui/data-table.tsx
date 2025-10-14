@@ -91,7 +91,25 @@ export function DataTable<TData, TValue>({
           variant='outline'
           className='hidden h-8 w-8 p-0 lg:flex'
         >
-          
+          <TbChevronsLeft />
+        </Button>
+        <Button
+          variant='outline'
+          className='hidden h-8 w-8 p-0 lg:flex'
+        >
+          <TbChevronLeft />
+        </Button>
+        <Button
+          variant='outline'
+          className='hidden h-8 w-8 p-0 lg:flex'
+        >
+          <TbChevronRight />
+        </Button>
+        <Button
+          variant='outline'
+          className='hidden h-8 w-8 p-0 lg:flex'
+        >
+          <TbChevronsRight />
         </Button>
       </div>
     </div>
