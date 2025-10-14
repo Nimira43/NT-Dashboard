@@ -1,8 +1,10 @@
 'use client'
 
 import { ColumnDef, flexRender, getCoreRowModel, getPaginationRowModel, useReactTable} from '@tanstack/react-table'
-
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Button } from './button'
+import { TbChevronsLeft, TbChevronsRight, TbChevronLeft, TbChevronRight } from 'react-icons/tb'
+
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -85,7 +87,12 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
       <div className='flex items-center space-x-2'>
-        
+        <Button
+          variant='outline'
+          className='hidden h-8 w-8 p-0 lg:flex'
+        >
+          
+        </Button>
       </div>
     </div>
   )
