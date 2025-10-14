@@ -40,7 +40,7 @@ export default function DashboardLayout({
       )}
       
       <div className='overflow-auto py-2 px-4'>
-        <h1 className='pb-4'>Date</h1>
+        
         {children}
       </div>
     </div>

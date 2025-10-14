@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function TodayDate() {
+export default function TodayDate() {
   const [date, setDate] = useState<string | null>(null)
 
   useEffect(() => {
@@ -13,4 +13,10 @@ function TodayDate() {
     })
     setDate(formattedDate)
   }, [])
+
+  if (!date) return null
+
+  return (
+    <h1 className='pb-4'>{date}</h1>
+  )
 }
