@@ -97,19 +97,25 @@ export function DataTable<TData, TValue>({
         </Button>
         <Button
           variant='outline'
-          className='hidden h-8 w-8 p-0 lg:flex'
+          className='h-8 w-8 p-0'
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
         >
           <TbChevronLeft />
         </Button>
         <Button
           variant='outline'
-          className='hidden h-8 w-8 p-0 lg:flex'
+          className='h-8 w-8 p-0'
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
         >
           <TbChevronRight />
         </Button>
         <Button
           variant='outline'
           className='hidden h-8 w-8 p-0 lg:flex'
+          onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+          disabled={!table.getCanNextPage()}
         >
           <TbChevronsRight />
         </Button>
