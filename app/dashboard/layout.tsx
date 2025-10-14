@@ -15,14 +15,6 @@ export default function DashboardLayout({
   const isDesktop = useMediaQuery('(min-width: 768px)')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false) 
 
-  const today = new Date()
-  const formattedDate = today.toLocaleDateString('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  })
-
   return (
     <div className='md:grid md:grid-cols-[250px_1fr] h-screen'>
       <MainMenu 
@@ -48,7 +40,7 @@ export default function DashboardLayout({
       )}
       
       <div className='overflow-auto py-2 px-4'>
-        <h1 className='pb-4'>{formattedDate}</h1>
+        <h1 className='pb-4'>Date</h1>
         {children}
       </div>
     </div>
