@@ -56,7 +56,7 @@ export const columns: ColumnDef<Employee>[] = [
       return (
         isTeamLeader ? 
         <Badge
-          variant='success'
+          variant='default'
         >
           Team Leader
         </Badge>
