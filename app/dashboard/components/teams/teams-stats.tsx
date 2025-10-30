@@ -5,13 +5,12 @@ import Link from 'next/link'
 import { TbUsers } from 'react-icons/tb'
 import { LuTicketCheck } from 'react-icons/lu'
 import { AiOutlinePieChart } from 'react-icons/ai'
-import Image from 'next/image'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
 import SupportTicketsResolved from './support-tickets-resolved'
 import { employees } from '@/data/mock-data'
-
+import { AvatarImage } from '@radix-ui/react-avatar'
 
 export default function TeamStats() {
   const supervisors = employees.filter(e => e.isTeamLeader)
@@ -59,13 +58,10 @@ export default function TeamStats() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Avatar>
-                      {!!supervisor.avatar &&
-                        <Image 
-                          src={supervisor.avatar} 
-                          alt={`${supervisor.firstName} ${supervisor.lastName}'s photo.`}
-
-                        />
-                      }
+                      <AvatarImage
+                        src={supervisor.avatar}
+                        alt={`${supervisor.firstName} ${supervisor.lastName}'s photo.`}
+                      />
                       <AvatarFallback>
                         {supervisor.firstName[0]}
                         {supervisor.lastName[0]}
