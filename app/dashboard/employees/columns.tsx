@@ -16,7 +16,9 @@ export const columns: ColumnDef<Employee>[] = [
     accessorKey: 'avatar',
     header: '',
     cell: ({row}) => {
-      const avatar = row.getValue('avata')
+      const avatar = row.getValue('avatar')
+      const firstName = row.getValue('firstName')
+      const lastName = row.getValue('lastName')
     } 
   },
   {
