@@ -1,4 +1,3 @@
-
 import { type Employee } from '@/app/dashboard/employees/columns'
 
 export const employees: Employee[] = [
@@ -8,7 +7,7 @@ export const employees: Employee[] = [
     lastName: 'Lytton',
     teamName: 'Eagles',
     isTeamLeader: true,
-    avatar: "/images/jl.jpg",
+    avatar: '/images/jl.jpg',
   },
   { id: 2,
     firstName: 'Owen',
@@ -28,7 +27,7 @@ export const employees: Employee[] = [
     lastName: 'Brent',
     teamName: 'Rhinos',
     isTeamLeader: true,
-    avatar: "/images/kb.jpg",
+    avatar: '/images/kb.jpg',
   },
   { id: 5,
     firstName: 'Selina',
@@ -60,7 +59,7 @@ export const employees: Employee[] = [
     lastName: 'Wilkins',
     teamName: 'Lions',
     isTeamLeader: true,
-    avatar: "/images/tw.jpg",
+    avatar: '/images/tw.jpg',
   },
 ]
 
