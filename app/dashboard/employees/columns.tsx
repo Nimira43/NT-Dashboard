@@ -1,6 +1,8 @@
 'use client'
 
+import { Avatar } from '@/components/ui/avatar'
 import { ColumnDef } from '@tanstack/react-table'
+import Image from 'next/image'
 
 export type Employee = {
   id: number
@@ -16,9 +18,22 @@ export const columns: ColumnDef<Employee>[] = [
     accessorKey: 'avatar',
     header: '',
     cell: ({row}) => {
-      const avatar = row.getValue('avatar')
+      const avatar: string = row.getValue('avatar')
       const firstName = row.getValue('firstName')
       const lastName = row.getValue('lastName')
+
+      return (
+        <Avatar>
+          {!!avatar && 
+            <Image 
+              src={avatar}
+              alt={`${firstName} ${lastName} avatar`}
+            
+            />              
+          }
+
+        </Avatar>
+      )
     } 
   },
   {
