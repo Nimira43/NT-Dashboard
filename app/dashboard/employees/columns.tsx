@@ -1,6 +1,7 @@
 'use client'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
 import { ColumnDef } from '@tanstack/react-table'
 
 export type Employee = {
@@ -53,8 +54,13 @@ export const columns: ColumnDef<Employee>[] = [
     cell: ({row}) => {
       const isTeamLeader: boolean = row.getValue('isTeamLeader')
       return (
-        isTeamLeader 
-        ? 
+        isTeamLeader ? 
+        <Badge
+          variant='success'
+        >
+          Team Leader
+        </Badge>
+        : null
       ) 
     }
   },
