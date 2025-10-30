@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
@@ -10,7 +10,6 @@ import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
 import SupportTicketsResolved from './support-tickets-resolved'
 import { employees } from '@/data/mock-data'
-import { AvatarImage } from '@radix-ui/react-avatar'
 
 export default function TeamStats() {
   const supervisors = employees.filter(e => e.isTeamLeader)
