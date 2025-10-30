@@ -5,7 +5,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Button } from './button'
 import { TbChevronsLeft, TbChevronsRight, TbChevronLeft, TbChevronRight } from 'react-icons/tb'
 
-
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]

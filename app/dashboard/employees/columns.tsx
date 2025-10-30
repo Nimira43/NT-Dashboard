@@ -49,6 +49,9 @@ export const columns: ColumnDef<Employee>[] = [
   },
   {
     accessorKey: 'isTeamLeader',
-    header: ''
+    header: '',
+    cell: ({row}) => {
+      const isTeamLeader: boolean = row.getValue('isTeamLeader')
+    }
   },
 ]
