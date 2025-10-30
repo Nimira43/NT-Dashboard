@@ -1,6 +1,6 @@
-import jl from '@/public/images/Jessica-Lytton.jpg'
-import tw from '@/public/images/Tom-Wilkins.jpg'
-import kb from '@/public/images/Karl-Brent.jpg'
+import jl from '@/public/images/jl.jpg'
+import tw from '@/public/images/tw.jpg'
+import kb from '@/public/images/kb.jpg'
 import { type Employee } from '@/app/dashboard/employees/columns'
 
 export const supervisors = [
