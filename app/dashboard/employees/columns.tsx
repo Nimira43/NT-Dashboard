@@ -14,7 +14,8 @@ export type Employee = {
 export const columns: ColumnDef<Employee>[] = [
   {
     accessorKey: 'avatar',
-    header: ''
+    header: '',
+    cell: () => <div>Testing</div> 
   },
   {
     accessorKey: 'firstName',
