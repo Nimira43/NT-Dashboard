@@ -10,7 +10,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { BiStar } from 'react-icons/bi'
 import TeamDistributionChart from './team-distribution-chart'
 import SupportTicketsResolved from './support-tickets-resolved'
-import { supervisors } from '@/data/mock-data'
+import { employees } from '@/data/mock-data'
+
 
 export default function TeamStats() {
   

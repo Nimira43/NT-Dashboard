@@ -1,8 +1,6 @@
 
 import { type Employee } from '@/app/dashboard/employees/columns'
 
-
-
 export const employees: Employee[] = [
   {
     id: 1,
