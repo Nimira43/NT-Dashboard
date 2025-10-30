@@ -14,7 +14,7 @@ import { employees } from '@/data/mock-data'
 
 
 export default function TeamStats() {
-  
+  const supervisors = employees.filter(e => e.isTeamLeader)
   return (
     <>
       <div className='grid lg:grid-cols-3 gap-4'>
